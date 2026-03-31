@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Guía de Crianza Respetuosa | Emma</title>
+    <title>Guía de Crianza Respetuosa | Emma - Versión Mejorada</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             background: #fef9f0;
-            font-family: 'Segoe UI', 'Roboto', 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+            font-family: 'Segoe UI', 'Roboto', 'Inter', system-ui, sans-serif;
             color: #2c2b28;
             line-height: 1.5;
             padding: 1rem;
         }
-
         .container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
         }
-
-        /* Header */
         .hero {
             background: #fae6cf;
             border-radius: 2rem;
@@ -32,7 +28,6 @@
             margin-bottom: 2rem;
             border-left: 12px solid #e2b87a;
         }
-
         h1 {
             font-size: 2rem;
             font-weight: 700;
@@ -42,7 +37,6 @@
             gap: 12px;
             flex-wrap: wrap;
         }
-
         h1 small {
             font-size: 0.9rem;
             background: #fff0e0;
@@ -51,13 +45,11 @@
             font-weight: normal;
             color: #b37b48;
         }
-
         .sub {
             font-size: 1rem;
             margin-top: 0.5rem;
             color: #5e3e26;
         }
-
         /* TABS */
         .tabs {
             display: flex;
@@ -67,7 +59,6 @@
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
         }
-
         .tab-btn {
             background: #f7e9dc;
             border: none;
@@ -79,28 +70,22 @@
             font-size: 0.9rem;
             color: #7a552e;
         }
-
         .tab-btn.active {
             background: #c9975e;
             color: white;
             box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
         }
-
         .tab-content {
             display: none;
             animation: fade 0.2s ease;
         }
-
         .tab-content.active {
             display: block;
         }
-
         @keyframes fade {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
-        /* Sub-tabs dentro de contenido */
         .sub-tabs {
             display: flex;
             flex-wrap: wrap;
@@ -128,8 +113,6 @@
         .sub-tab-pane.active {
             display: block;
         }
-
-        /* Cards y contenido */
         .card {
             background: white;
             border-radius: 1.2rem;
@@ -138,7 +121,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.03);
             border: 1px solid #f3e5d2;
         }
-        .card h3 {
+        .card h3, .card h4 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: #9b6a3c;
@@ -225,6 +208,20 @@
             .tabs { gap: 0.3rem; }
             .tab-btn { padding: 0.4rem 1rem; font-size: 0.8rem; }
         }
+        .highlight {
+            background: #fae2b3;
+            border-radius: 0.5rem;
+            padding: 0.1rem 0.3rem;
+            font-weight: 500;
+        }
+        .tip {
+            background: #eef4e6;
+            border-left: 4px solid #8fb56e;
+            padding: 0.6rem;
+            margin: 0.8rem 0;
+            border-radius: 0.8rem;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -255,88 +252,92 @@
         </div>
         <div id="edad0-1" class="sub-tab-pane active">
             <div class="grid-2">
-                <div class="card"><h3>👶 Recién nacido a 1 año</h3><span class="badge">Apego seguro</span><p>Responder siempre a sus llantos, establecer rutinas de sueño seguras, estimulación con voz suave, tummy time supervisado, evitar pantallas. <br><strong>Lactancia:</strong> a demanda. A partir de 6 meses, introducción de sólidos con supervisión.</p></div>
-                <div class="card"><h3>🛌 Sueño seguro (0-12m)</h3><p>Boca arriba, sin almohadas, sin objetos sueltos, colecho seguro si se elige, cuna libre de peluches. Evitar sobrecalentamiento.</p></div>
-                <div class="card"><h3>🗣️ Comunicación</h3><p>Háblale cara a cara, responde a sus balbuceos. Esto fortalece el desarrollo del lenguaje y la conexión emocional.</p></div>
-                <div class="card"><h3>🤱 Alimentación primeros meses</h3><p>Leche materna o fórmula exclusiva hasta los 6 meses. No dar agua, jugos ni miel. Señales de hambre: chupeteo, inquietud.</p></div>
+                <div class="card"><h3>👶 Recién nacido a 1 año</h3><span class="badge">Apego seguro</span><p><strong>Llanto:</strong> responde siempre, no se malcría. El llanto es su única comunicación. <br><strong>Tummy time:</strong> desde el primer mes, varias veces al día, supervisado. Fortalece cervicales y motricidad.<br><strong>Lactancia:</strong> a demanda, sin horarios. La leche materna o fórmula es el único alimento hasta los 6 meses.<br><strong>Sueño seguro:</strong> boca arriba, sin almohadas, sin objetos sueltos.<br><strong>Estimulación:</strong> háblale cara a cara, responde a sus balbuceos, lee cuentos desde pequeño.</p></div>
+                <div class="card"><h3>🛌 Sueño seguro (0-12m)</h3><p>• Siempre boca arriba.<br>• Colchón firme, sin almohadas, sin peluches ni protectores.<br>• No abrigar en exceso (temperatura ambiente ~20-22°C).<br>• Compartir habitación los primeros 6-12 meses, pero no la misma cama si hay factores de riesgo (tabaco, alcohol, exceso de ropa).<br>• Colecho seguro: si se elige, seguir las reglas de la AAP.</p></div>
+                <div class="card"><h3>🗣️ Comunicación y cerebro</h3><p>• Háblale con palabras reales, no "babyspeak" excesivo.<br>• Responde a sus gorjeos y balbuceos para fomentar el desarrollo del lenguaje.<br>• El contacto visual y las expresiones faciales ayudan a la sincronía neuronal.</p></div>
+                <div class="card"><h3>🤱 Alimentación primeros meses</h3><p>• Leche materna o fórmula exclusiva hasta los 6 meses.<br>• No dar agua, jugos, infusiones ni miel antes del año.<br>• Señales de hambre: chupeteo, movimientos de cabeza, inquietud; llorar es señal tardía.</p></div>
             </div>
+            <div class="tip"><strong>🧠 Consejo extra:</strong> El contacto piel con piel en los primeros meses regula la temperatura, el ritmo cardíaco y fortalece el vínculo. Usa un portabebés ergonómico para mantenerla cerca mientras haces tareas.</div>
         </div>
         <div id="edad1-3" class="sub-tab-pane">
             <div class="grid-2">
-                <div class="card"><h3>🚶‍♀️ 1 a 3 años: autonomía y límites</h3><p>Establecer rutinas predecibles. Ofrecer opciones limitadas. Validar emociones ante rabietas. No castigos físicos. Fomentar el juego libre.</p></div>
-                <div class="card"><h3>🍽️ Alimentación</h3><p>División de responsabilidades: adulto decide qué y cuándo; niño decide cuánto. Evitar presión. Introducir variedad sin forzar.</p></div>
-                <div class="card"><h3>🎭 Gestión de rabietas</h3><p>Mantener la calma, ponerse a su altura, validar: “Estás enfadada porque…”. Acompañar, redirigir después del pico emocional.</p></div>
-                <div class="card"><h3>💬 Lenguaje respetuoso</h3><p>Evitar etiquetas (“eres mala”, “llorón”). Describir la conducta sin juzgar. Refuerzo positivo específico.</p></div>
+                <div class="card"><h3>🚶‍♀️ 1 a 3 años: autonomía y límites</h3><p>• Ofrece opciones limitadas: "¿Quieres la manzana o la pera?"<br>• Establece rutinas predecibles (comida, baño, sueño).<br>• Ante rabietas: mantén la calma, ponte a su altura, valida: "Estás enfadada porque no podemos seguir jugando".<br>• Evita el "no" constante; usa lenguaje positivo: "Las manos suaves", "Caminamos adentro".</p></div>
+                <div class="card"><h3>🍽️ Alimentación</h3><p>• División de responsabilidades (Ellyn Satter): tú eliges qué, cuándo y dónde; ella decide si come y cuánto.<br>• Introduce texturas variadas; permite que coma con las manos.<br>• No uses postre como premio ni obligues a terminar el plato.</p></div>
+                <div class="card"><h3>🎭 Gestión de rabietas</h3><p>• Ignora la conducta si no es peligrosa (no mirar, no hablar, no tocar).<br>• En cuanto cese, presta atención positiva: "¡Qué bien te calmaste! ¿Quieres un abrazo?"<br>• Redirige a una actividad aceptable.</p></div>
+                <div class="card"><h3>💬 Lenguaje respetuoso</h3><p>• No etiquetes: en lugar de "eres desordenada", di "veo que los juguetes están en el suelo, vamos a recogerlos".<br>• Refuerza el esfuerzo: "Te esforzaste mucho en ponerte los zapatos".<br>• Nombra emociones: "Estás triste porque se fue el amigo".</p></div>
             </div>
         </div>
         <div id="edad3-5" class="sub-tab-pane">
             <div class="grid-2">
-                <div class="card"><h3>🎨 3 a 5 años: emociones y normas</h3><p>Fomentar la resolución de conflictos con palabras, enseñar a identificar emociones. Negociación dentro de límites claros.</p></div>
-                <div class="card"><h3>📚 Preparación escolar</h3><p>Leer cuentos, juego simbólico, hablar sobre el colegio con normalidad. Escuchar activamente sus experiencias sociales.</p></div>
-                <div class="card"><h3>🏃‍♂️ Límites activos</h3><p>Usar consecuencias lógicas: “Si no recoges los juguetes, no podremos sacar otros”. Conexión antes de corrección.</p></div>
-                <div class="card"><h3>🖐️ Conductas agresivas</h3><p>Interrumpir con calma: “No voy a dejar que pegues. Estás enfadada. Vamos a calmarnos juntos”. Enseñar alternativas.</p></div>
+                <div class="card"><h3>🎨 3 a 5 años: emociones y normas</h3><p>• Fomenta la resolución de conflictos con palabras: "¿Qué podemos hacer para solucionarlo?"<br>• Usa consecuencias lógicas: "Si no recoges los juguetes, no podremos sacar otros".<br>• Involúcrala en la creación de normas familiares.<br>• Enséñale a identificar emociones con cuentos y juegos.</p></div>
+                <div class="card"><h3>📚 Preparación escolar y social</h3><p>• Juego simbólico para procesar experiencias.<br>• Escucha activa: cuando te cuente algo del cole, valida sin interrogar: "Gracias por contarme, ¿cómo te sentiste?"<br>• Enséñale herramientas para pedir ayuda y poner límites: "No me gusta que me empujes, para".</p></div>
+                <div class="card"><h3>🏃‍♂️ Límites activos</h3><p>• Usa frases cortas y claras.<br>• Conecta antes de corregir: agáchate, contacto visual.<br>• Dale alternativas: "No podemos correr dentro, pero podemos saltar como ranas en el jardín".</p></div>
+                <div class="card"><h3>🖐️ Conductas agresivas</h3><p>• Interrumpe con calma: "No voy a dejar que pegues. Las manos son para cuidar".<br>• Ofrece una alternativa física: golpear una almohada, aplastar plastilina.<br>• Después de la calma, reflexiona: "¿Qué podemos hacer cuando estamos enojados?"</p></div>
             </div>
         </div>
     </div>
 
-    <!-- CÓMO ACTUAR ANTE CONDUCTAS -->
+    <!-- CÓMO ACTUAR ANTE CONDUCTAS (ampliado) -->
     <div id="tab-conductas" class="tab-content">
-        <div class="card"><h3>⚡ Estrategia general (basada en disciplina positiva)</h3><p>1. Conectar (arrodillarse, contacto visual). 2. Validar emoción: “Veo que estás muy enojada”. 3. Límite claro: “No puedo dejar que…” 4. Alternativa: “Podemos hacer esto otro”. <br><strong>Ignorar conductas leves no peligrosas</strong> (si no hay riesgo) y reforzar positivo en cuanto cesan.</p></div>
+        <div class="card"><h3>⚡ Estrategia general (basada en disciplina positiva)</h3><p>1. <strong>Conectar</strong>: arrodíllate, contacto visual, tono calmado.<br>2. <strong>Validar emoción</strong>: "Veo que estás muy enfadada porque..."<br>3. <strong>Límite claro</strong>: "No puedo dejar que..."<br>4. <strong>Alternativa</strong>: "Podemos hacer esto otro".<br><strong>Ignorar conductas leves no peligrosas</strong>: no mires, no hables, no toques hasta que cese. Luego atención positiva inmediata.</p></div>
         <div class="grid-2">
-            <div class="card"><h4>😤 Berrinches</h4><p>Ignora si no hay peligro, no le hables ni la mires hasta que se calme. Luego atención inmediata: “Veo que ya estás más tranquila, ¿necesitas un abrazo?”</p></div>
-            <div class="card"><h4>✋ Pegar / agredir</h4><p>Sujeta suavemente su mano: “No voy a dejar que me lastimes. Las manos son para cuidar”. Ofrece alternativa: aplastar plastilina, patear cojín.</p></div>
-            <div class="card"><h4>🗣️ Malas palabras</h4><p>Sin reacción exagerada: “Esa palabra no es amable. Si estás enojada, dime: ‘estoy furiosa’”. Enséñale vocabulario emocional.</p></div>
-            <div class="card"><h4>🏫 Conflictos en el cole</h4><p>Escucha sin interrogar: “Cuéntame más”. Valida: “Qué feo cuando te pegan”. Juntos buscar solución con el adulto responsable.</p></div>
-            <div class="card"><h4>🚫 Rechazo a baño/vacunas</h4><p>Anticipa, da opciones: “¿Quieres bañarte con pato o con barquito?” Para vacunas, honestidad: “Duele un poquito, yo te acompaño”.</p></div>
-            <div class="card"><h4>🍽️ No quiere comer</h4><p>No obligar. “Tu cuerpo sabe cuánto necesita. Aquí está la comida, decides cuánto”. Come con ella, sin presión.</p></div>
+            <div class="card"><h4>😤 Berrinches</h4><p>• <strong>Durante</strong>: mantén la calma, asegura su seguridad, no cedas por presión.<br>• <strong>Después</strong>: "Ya estás más tranquila, ¿necesitas agua o un abrazo?"<br>• <strong>Prevención</strong>: anticipa transiciones, ofrece opciones.</p></div>
+            <div class="card"><h4>✋ Pegar / agredir</h4><p>• Sujeta suavemente su mano: "No voy a dejar que me lastimes".<br>• Enséñale qué hacer en lugar de qué no hacer: "Las manos son para acariciar, para dar palmaditas suaves".<br>• Modela cómo pedir disculpas cuando ambas estén calmadas.</p></div>
+            <div class="card"><h4>🗣️ Malas palabras</h4><p>• Sin reacción exagerada. Si busca atención, ignora.<br>• Explica: "Esa palabra puede herir. Si estás enojada, puedes decir 'estoy furiosa' y te ayudaré".<br>• Cuida tu propio lenguaje; los niños imitan.</p></div>
+            <div class="card"><h4>🏫 Conflictos en el cole</h4><p>• Escucha sin interrogar: "Cuéntame más".<br>• Valida: "Qué feo cuando te empujan".<br>• No minimices: "No fue para tanto" – mejor: "Eso debió dolerte".<br>• Contacta con el centro si es necesario, siempre en equipo.</p></div>
+            <div class="card"><h4>🚫 Rechazo a baño/vacunas</h4><p>• <strong>Baño</strong>: anticipa con juego, da opciones: "¿Quieres el pato o la rana?"<br>• <strong>Vacunas</strong>: honestidad: "Duele un poquito, pero es muy rápido. Yo te abrazo".<br>• Evita engaños o sobornos; la confianza es clave.</p></div>
+            <div class="card"><h4>🍽️ No quiere comer</h4><p>• No fuerces. Ofrece y retira sin presión.<br>• Come con ella; los niños aprenden por imitación.<br>• Respeta su apetito. Si rechaza un alimento, ofrécelo en otra ocasión sin comentarios.</p></div>
         </div>
-        <div class="reference"><strong>📌 Clave:</strong> El refuerzo positivo funciona mejor cuando se enfoca en el esfuerzo (“te esforzaste mucho”) no en resultados (“qué inteligente”). Fomenta mentalidad de crecimiento.</div>
+        <div class="reference"><strong>📌 Clave:</strong> El refuerzo positivo funciona mejor cuando se enfoca en el esfuerzo ("te esforzaste mucho") no en resultados ("qué inteligente"). Fomenta mentalidad de crecimiento.</div>
     </div>
 
-    <!-- ALIMENTACIÓN -->
+    <!-- ALIMENTACIÓN (ampliado) -->
     <div id="tab-alimentacion" class="tab-content">
         <div class="grid-2">
-            <div class="card"><h3>🥄 Lactancia materna / fórmula</h3><p>Exclusiva hasta los 6 meses. A demanda, sin horarios rígidos. No ofrecer agua, jugos ni infusiones antes de los 6 meses.</p></div>
-            <div class="card"><h3>🍼 Introducción de sólidos (~6 meses)</h3><p><strong>Señales:</strong> sostén de cabeza, se sienta con apoyo, curiosidad por la comida. Comenzar con papillas suaves (verduras, frutas), un alimento nuevo cada 3-5 días.</p></div>
-            <div class="card"><h3>🚫 Alimentos prohibidos primer año</h3><p>Miel, leche de vaca, jugos, azúcar añadido, sal, mariscos, infusiones, verduras de hoja verde en exceso, ultraprocesados.</p></div>
-            <div class="card"><h3>🥦 De 1 a 3 años</h3><p>Ofrecer variedad sin presión. Modelar hábitos saludables. Evitar usar postre como premio. Respetar saciedad.</p></div>
-            <div class="card"><h3>🍎 Si rechaza la comida</h3><p>No forzar. Ofrecer sólidos antes de la leche (si ya come bien). Comer juntos en familia. La exposición repetida sin presión aumenta aceptación.</p></div>
-            <div class="card"><h3>🧴 Texturas</h3><p>Avanzar desde papilla suave a texturas más grumosas y trozos pequeños hacia los 8-10 meses. Favorecer el agarre con alimentos blandos.</p></div>
+            <div class="card"><h3>🥄 Lactancia materna / fórmula</h3><p>Exclusiva hasta los 6 meses. A demanda. La leche materna se adapta a las necesidades del bebé. Si usas fórmula, sigue las indicaciones de preparación.</p></div>
+            <div class="card"><h3>🍼 Introducción de sólidos (~6 meses)</h3><p><strong>Señales de madurez:</strong> sostén de cabeza, se sienta con apoyo, pierde reflejo de extrusión, muestra interés por la comida.<br>Comienza con papillas de verduras o frutas, un alimento nuevo cada 3-5 días para detectar alergias.<br>Ofrece hierro: purés de lentejas, carne, pollo.</p></div>
+            <div class="card"><h3>🚫 Alimentos prohibidos primer año</h3><p>Miel (riesgo de botulismo), leche de vaca (como bebida principal), jugos, azúcar añadido, sal, mariscos crudos, verduras de hoja verde en exceso (nitratos), infusiones, ultraprocesados.</p></div>
+            <div class="card"><h3>🥦 De 1 a 3 años</h3><p>Ofrece variedad sin presión. Modela hábitos saludables. Evita usar postre como premio. Involúcrala en la preparación de comidas sencillas.</p></div>
+            <div class="card"><h3>🍎 Si rechaza la comida</h3><p>No forces. Ofrece el sólido antes que la leche (si ya come bien). Come juntos en familia. La exposición repetida sin presión aumenta aceptación.</p></div>
+            <div class="card"><h3>🧴 Texturas y BLW</h3><p>A partir de los 6-7 meses puedes ofrecer alimentos en trozos blandos (baby-led weaning) si muestra interés. Siempre supervisado. Evita piezas duras o redondas que puedan causar atragantamiento.</p></div>
         </div>
+        <div class="tip"><strong>🥣 Consejo extra:</strong> No compares con otros niños. Cada niño tiene su ritmo de alimentación. La presión genera rechazo. Confía en su capacidad de autorregulación.</div>
     </div>
 
     <!-- DESARROLLO Y ESTIMULACIÓN -->
     <div id="tab-desarrollo" class="tab-content">
         <div class="grid-2">
-            <div class="card"><h3>🗣️ Lenguaje</h3><p>Háblale con claridad, responde a sus balbuceos, narra lo que haces. Leer cuentos desde el primer mes fortalece el vínculo y vocabulario.</p></div>
-            <div class="card"><h3>🤸 Movimiento y tummy time</h3><p>Desde recién nacido: boca abajo supervisado varias veces al día, fortalece cuello y espalda. Muévela suavemente, cambia posiciones.</p></div>
-            <div class="card"><h3>🎨 Juego libre</h3><p>Sin pantallas. Ofrecer objetos seguros para explorar. No interrumpir su concentración. Acompañar sin dirigir en exceso.</p></div>
-            <div class="card"><h3>❤️ Vínculo seguro</h3><p>Responder con sensibilidad al llanto. El contacto piel con piel, masajes, canciones. Esto regula su sistema nervioso.</p></div>
+            <div class="card"><h3>🗣️ Lenguaje</h3><p>• Háblale con claridad, responde a sus balbuceos.<br>• Lee cuentos desde el primer mes. Señala imágenes y nombra.<br>• Evita corregir sus primeras palabras; repite correctamente: "Sí, un perro".</p></div>
+            <div class="card"><h3>🤸 Movimiento y tummy time</h3><p>• Tummy time varias veces al día desde recién nacido (supervisado).<br>• Muévela en diferentes direcciones, boca arriba, de costado.<br>• Ofrece espacio seguro para gatear y explorar.</p></div>
+            <div class="card"><h3>🎨 Juego libre</h3><p>• Sin pantallas. Ofrece objetos cotidianos seguros (cucharas de madera, recipientes).<br>• No interrumpas su concentración. Acompaña sin dirigir.<br>• El juego no estructurado desarrolla creatividad y resolución de problemas.</p></div>
+            <div class="card"><h3>❤️ Vínculo seguro</h3><p>• Responde sensiblemente al llanto. El contacto piel con piel, masajes, canciones.<br>• Los rituales de despedida y bienvenida fortalecen la seguridad.<br>• La presencia calmada de los adultos regula su sistema nervioso.</p></div>
         </div>
     </div>
 
     <!-- SUEÑO SEGURO -->
     <div id="tab-sueno" class="tab-content">
         <div class="grid-2">
-            <div class="card"><h3>😴 Posición segura (0-12m)</h3><p>Siempre boca arriba, superficie firme, sin almohadas, sin juguetes ni protectores. Ropa adecuada sin abrigar en exceso.</p></div>
-            <div class="card"><h3>🛏️ Colecho seguro</h3><p>Si se practica, seguir reglas: colchón firme, sin huecos, padres sin alcohol/tabaco, lejos de paredes peligrosas.</p></div>
-            <div class="card"><h3>🌙 Rutinas de sueño</h3><p>Ambiente tranquilo, oscuro, ruido blanco si ayuda. Señales de sueño: bostezos, frotarse ojos. Acostar antes del agotamiento extremo.</p></div>
+            <div class="card"><h3>😴 Posición segura (0-12m)</h3><p>Siempre boca arriba, superficie firme, sin almohadas, sin juguetes ni protectores. Ropa adecuada sin abrigar en exceso. El colecho ocasional debe cumplir normas de seguridad.</p></div>
+            <div class="card"><h3>🛏️ Colecho seguro</h3><p>Si se practica: colchón firme, sin huecos, padres sin alcohol/tabaco, lejos de paredes peligrosas, sin ropa de cama suelta. La AAP recomienda compartir habitación al menos 6 meses.</p></div>
+            <div class="card"><h3>🌙 Rutinas de sueño</h3><p>Ambiente oscuro, tranquilo. Baño tibio, masaje, cuento. Señales de sueño: bostezos, frotarse ojos. Acostar antes del agotamiento extremo.</p></div>
             <div class="card"><h3>📉 Despertares nocturnos</h3><p>Normales en bebés. Responder con calma, no dejar llorar sin consuelo. Con el tiempo aprenderán a autorregularse con acompañamiento.</p></div>
         </div>
+        <div class="tip"><strong>💡 Para mayores de 1 año:</strong> Usa un ritual de sueño predecible. Si hay resistencia, valida sus sentimientos y mantén el límite con ternura.</div>
     </div>
 
     <!-- TIEMPO DE PANTALLA -->
     <div id="tab-pantallas" class="tab-content">
-        <div class="card"><h3>📵 Recomendaciones AAP</h3><p><strong>0-18 meses:</strong> Cero pantallas (excepto videollamadas familiares). <br><strong>18-24 meses:</strong> Hasta 30 minutos/día de contenido educativo de alta calidad, siempre acompañado.<br><strong>2-5 años:</strong> Máximo 1 hora/día, preferiblemente con interacción adulto-niño.</p></div>
-        <div class="card"><h3>👀 Interacción activa</h3><p>Cuando Emma esté despierta, evita usar pantallas por ocio a su alrededor. El adulto presente es su principal estímulo.</p></div>
-        <div class="card"><h3>🧠 Por qué limitar</h3><p>Exceso de pantallas se asocia con retrasos en lenguaje, problemas de atención y afectación del sueño. La interacción cara a cara es insustituible.</p></div>
+        <div class="card"><h3>📵 Recomendaciones AAP</h3><p><strong>0-18 meses:</strong> Cero pantallas (excepto videollamadas familiares). <br><strong>18-24 meses:</strong> Hasta 30 minutos/día de contenido educativo de alta calidad, siempre acompañado.<br><strong>2-5 años:</strong> Máximo 1 hora/día, preferiblemente con interacción adulto-niño.<br><strong>Evita</strong> usar pantallas como calmante o para comer.</p></div>
+        <div class="card"><h3>👀 Interacción activa</h3><p>Cuando Emma esté despierta, evita usar pantallas por ocio a su alrededor. El adulto presente es su principal estímulo. Las pantallas pasivas interfieren con la atención conjunta.</p></div>
+        <div class="card"><h3>🧠 Por qué limitar</h3><p>Exceso de pantallas se asocia con retrasos en lenguaje, problemas de atención, afectación del sueño y menor interacción social. La interacción cara a cara es insustituible para el desarrollo cerebral.</p></div>
+        <div class="card"><h3>📱 Alternativas</h3><p>Ofrece juguetes abiertos, libros, tiempo al aire libre, música, juegos de movimiento. El aburrimiento creativo es importante para la imaginación.</p></div>
     </div>
 
-    <!-- ANALIZADOR DE RESPUESTAS (totalmente funcional) -->
+    <!-- ANALIZADOR DE RESPUESTAS MEJORADO -->
     <div id="tab-analizador" class="tab-content">
         <div class="tool-section">
-            <h3>📝 Practica tu respuesta respetuosa</h3>
-            <p>Describe qué hizo Emma y cómo piensas responder. El sistema te dará retroalimentación basada en crianza respetuosa y evidencia.</p>
+            <h3>📝 Analizador de respuestas respetuosas</h3>
+            <p>Describe qué hizo Emma y cómo piensas responder. Recibirás retroalimentación detallada basada en evidencia.</p>
             <div class="flex-buttons">
                 <button class="btn" id="exBerrinche">😤 Berrinche por baño</button>
                 <button class="btn" id="exGolpe">✋ Pegó a un niño</button>
@@ -344,9 +345,10 @@
                 <button class="btn" id="exGroseria">🗣️ Dijo grosería</button>
                 <button class="btn" id="exColegio">🏫 “Me pegaron en el cole”</button>
                 <button class="btn" id="exEsfuerzo">🏆 Logró puzzle (elogio)</button>
+                <button class="btn" id="exLimpieza">🧸 Recogió juguetes</button>
             </div>
             <label for="accionEmma">📋 Lo que Emma hizo / dijo:</label>
-            <textarea id="accionEmma" rows="2" placeholder="Ej: Hizo un berrinche enorme porque no quería bañarse, me pegó..."></textarea>
+            <textarea id="accionEmma" rows="2" placeholder="Ej: Hizo un berrinche porque no quería bañarse, me pegó..."></textarea>
             <label for="respuestaPlaneada" style="margin-top:1rem;">💬 Mi respuesta planeada:</label>
             <textarea id="respuestaPlaneada" rows="3" placeholder="Ej: 'Deja de llorar o no hay cuento'"></textarea>
             <div style="margin:1.2rem 0; text-align:right;">
@@ -355,28 +357,28 @@
             <div id="feedbackContainer" class="result-box" style="display:none;">
                 <div id="feedbackContent"></div>
             </div>
-            <p class="sub" style="font-size:0.75rem;">Basado en recomendaciones de AAP, Dr. Carlos González, Daniel Siegel, disciplina positiva.</p>
+            <p class="sub" style="font-size:0.75rem;">Basado en recomendaciones de AAP, disciplina positiva, Daniel Siegel, Carlos González.</p>
         </div>
     </div>
 
-    <!-- CONCEPTOS CLAVE -->
+    <!-- CONCEPTOS CLAVE (ampliado) -->
     <div id="tab-conceptos" class="tab-content">
         <div class="grid-2">
-            <div class="card"><h3>🧠 Apego seguro</h3><p>Responder consistentemente a las necesidades del bebé genera seguridad emocional. Emma aprenderá que puede confiar en sus cuidadores, base para su autonomía futura.</p></div>
-            <div class="card"><h3>✨ Mentalidad de crecimiento</h3><p>Elogiar el esfuerzo, no el talento. Frases: “¡Qué bien perseveraste!” en lugar de “qué inteligente”. Fomenta resiliencia y gusto por aprender.</p></div>
-            <div class="card"><h3>❤️ Disciplina positiva</h3><p>Límites claros sin castigos. Consecuencias lógicas relacionadas con el acto. El objetivo es enseñar, no someter.</p></div>
+            <div class="card"><h3>🧠 Apego seguro</h3><p>Responder consistentemente a las necesidades del bebé genera seguridad. Emma aprenderá que puede confiar en sus cuidadores, base para su autonomía futura.</p></div>
+            <div class="card"><h3>✨ Mentalidad de crecimiento</h3><p>Elogiar el proceso, no el talento. Frases: “¡Qué bien perseveraste!” en lugar de “qué inteligente”. Fomenta resiliencia y gusto por aprender.</p></div>
+            <div class="card"><h3>❤️ Disciplina positiva</h3><p>Límites claros sin castigos. Consecuencias lógicas relacionadas con el acto. El objetivo es enseñar, no someter. Firmeza con empatía.</p></div>
             <div class="card"><h3>📢 Comunicación no violenta</h3><p>Observar sin juzgar, expresar sentimientos, pedir acciones concretas. Ejemplo: “Cuando veo los juguetes en el suelo, me siento cansada. ¿Puedes guardarlos conmigo?”</p></div>
             <div class="card"><h3>🧘 Co-regulación emocional</h3><p>Los adultos ayudamos a los niños a calmarse. Si mantenemos la calma, su cerebro se regula. No abandonar durante las rabietas.</p></div>
             <div class="card"><h3>🚫 Evitar etiquetas</h3><p>“Eres llorona”, “eres enojona” condicionan su identidad. Describir conductas: “Ahora estás triste” vs “eres un llorón”.</p></div>
         </div>
-        <div class="reference"><strong>📚 Fuentes:</strong> AAP, Academia Americana de Pediatría; Daniel J. Siegel (Neurociencia); Jane Nelsen (Disciplina Positiva); Carlos González (Pediatría basada en apego).</div>
+        <div class="reference"><strong>📚 Fuentes:</strong> AAP, Academia Americana de Pediatría; Daniel J. Siegel (Neurociencia); Jane Nelsen (Disciplina Positiva); Carlos González (Pediatría basada en apego); Ellyn Satter (alimentación); Carol Dweck (Mindset).</div>
     </div>
 
     <footer>🌱 Guía dinámica para acompañar a Emma con evidencia y ternura. Cada etapa es única: confía en tu instinto respetuoso.</footer>
 </div>
 
 <script>
-    // ----- SISTEMA DE TABS PRINCIPALES -----
+    // Sistema de pestañas principales
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     tabBtns.forEach(btn => {
@@ -402,123 +404,128 @@
         });
     });
 
-    // ----- ANALIZADOR MEJORADO -----
+    // ==================== ANALIZADOR MEJORADO ====================
     const analizarBtn = document.getElementById('analizarBtn');
     const accionInput = document.getElementById('accionEmma');
     const respuestaInput = document.getElementById('respuestaPlaneada');
     const feedbackContainer = document.getElementById('feedbackContainer');
     const feedbackContent = document.getElementById('feedbackContent');
 
-    function obtenerFeedback(accion, respuesta) {
+    function obtenerFeedbackAvanzado(accion, respuesta) {
         let mensaje = "";
         const lowerAccion = accion.toLowerCase();
         const lowerResp = respuesta.toLowerCase();
-        
-        // Detectar categorías con palabras clave
+
+        // Detectar categoría de situación
         let categoria = "general";
-        if (/(berrinche|rabieta|patale|gritar|tirarse al suelo)/i.test(lowerAccion)) categoria = "berrinche";
-        else if (/(pegar|golpe|morder|manotazo|agredir)/i.test(lowerAccion)) categoria = "agresion";
-        else if (/(vacuna|bañarse|baño|no quiere bañarse)/i.test(lowerAccion)) categoria = "rechazo";
-        else if (/(no quiere comer|comer|alimento)/i.test(lowerAccion)) categoria = "comida";
-        else if (/(malas palabras|grosería|insulto)/i.test(lowerAccion)) categoria = "groseria";
-        else if (/(colegio le pegaron|me pegaron|no quieren jugar)/i.test(lowerAccion)) categoria = "conflicto";
-        else if (/(logró|armó|resolvió|esfuerzo|puzzle)/i.test(lowerAccion)) categoria = "logro";
-        
-        // Evaluar si la respuesta usa castigos o invalida
-        const tieneAmenaza = /(sin tele|sin juguete|castigo|te vas a quedar sin|no te quiero|vas a ver)/i.test(lowerResp);
-        const tieneInvalidacion = /(no es para tanto|deja de llorar|no pasa nada|exageras|no llores)/i.test(lowerResp);
-        const tieneEmpatia = /(entiendo|sé que|estás enojada|estás triste|veo que|te escucho|entiendo que)/i.test(lowerResp);
-        const tieneLimiteAmable = /(no voy a dejar que|no puedo permitir|vamos a hacer|necesito que)/i.test(lowerResp);
-        const tieneElogioEsfuerzo = /(te esforzaste|lo intentaste|perseverancia|concentraste|has trabajado)/i.test(lowerResp);
-        
-        // Lógica por categoría
-        if (categoria === "berrinche") {
-            mensaje += "📌 Situación: Berrinche / rabieta.\n✅ Recomendación: Mantén la calma, ignora la conducta si no es peligrosa, no le hables ni la mires hasta que se calme. En cuanto pare, presta atención positiva: 'Veo que ya estás más tranquila, ¿necesitas un abrazo?'. Después redirige.\n";
-        } else if (categoria === "agresion") {
-            mensaje += "📌 Situación: Agresión física.\n✅ Interrumpe con calma: 'No voy a dejar que pegues. Las manos no son para lastimar. Estás enfadada, vamos a golpear esta almohada juntas'. Evita castigos físicos.\n";
-        } else if (categoria === "rechazo") {
-            mensaje += "📌 Situación: Rechazo a baño/vacuna.\n✅ Anticipa y da opciones. Para vacuna: honestidad 'duele un poquito, pero rápido, yo te acompaño'. Para baño: ofrece elección limitada.\n";
-        } else if (categoria === "comida") {
-            mensaje += "📌 Situación: No quiere comer.\n✅ No fuerces. Aplica división de responsabilidades: tú ofreces, ella decide cuánto. Come con ella sin presión.\n";
-        } else if (categoria === "groseria") {
-            mensaje += "📌 Situación: Malas palabras.\n✅ Sin drama, ignorar si es por atención. Luego enseñar alternativa: 'Podemos decir: estoy muy enojada'.\n";
-        } else if (categoria === "conflicto") {
-            mensaje += "📌 Situación: Conflicto en el colegio.\n✅ Escucha activamente, valida sus sentimientos: 'Qué duro que te hayan pegado, gracias por contármelo'. Juntos buscar solución con el adulto responsable.\n";
-        } else if (categoria === "logro") {
-            if (tieneElogioEsfuerzo) mensaje += "✅ Excelente: estás elogiando el esfuerzo, lo que fomenta mentalidad de crecimiento.\n";
-            else if (/que inteligente|muy lista|genia/i.test(lowerResp)) mensaje += "⚠️ Cuidado: 'qué inteligente' puede generar miedo al error. Mejor destaca el proceso: '¡Te esforzaste mucho!'.\n";
-            else mensaje += "💡 Para logros, recuerda resaltar el esfuerzo, no solo el resultado.\n";
-        } else {
-            mensaje += "📘 Guía general: Conecta, valida, límite amable y alternativa.\n";
+        if (/(berrinche|rabieta|patale|gritar|tirarse al suelo|enfado extremo)/i.test(lowerAccion)) categoria = "berrinche";
+        else if (/(pegar|golpe|morder|manotazo|agredir|empujar)/i.test(lowerAccion)) categoria = "agresion";
+        else if (/(vacuna|bañarse|baño|no quiere bañarse|no quiere vacuna)/i.test(lowerAccion)) categoria = "rechazo";
+        else if (/(no quiere comer|comer|alimento|no come)/i.test(lowerAccion)) categoria = "comida";
+        else if (/(malas palabras|grosería|insulto|dijo una palabra)/i.test(lowerAccion)) categoria = "groseria";
+        else if (/(colegio le pegaron|me pegaron|no quieren jugar|en el cole)/i.test(lowerAccion)) categoria = "conflicto";
+        else if (/(logró|armó|resolvió|esfuerzo|puzzle|terminó|recogió)/i.test(lowerAccion)) categoria = "logro";
+
+        // Análisis de la respuesta del adulto
+        const tieneAmenaza = /(sin tele|sin juguete|castigo|te vas a quedar sin|no te quiero|vas a ver|no te lo compro|te voy a dejar)/i.test(lowerResp);
+        const tieneInvalidacion = /(no es para tanto|deja de llorar|no pasa nada|exageras|no llores|no es nada)/i.test(lowerResp);
+        const tieneEmpatia = /(entiendo|sé que|estás enojada|estás triste|veo que|te escucho|entiendo que|qué difícil)/i.test(lowerResp);
+        const tieneLimiteAmable = /(no voy a dejar que|no puedo permitir|vamos a hacer|necesito que|es momento de|ahora toca)/i.test(lowerResp);
+        const tieneAlternativa = /(podemos|mejor vamos a|en vez de|puedes elegir|quieres|vamos a intentar)/i.test(lowerResp);
+        const tieneElogioEsfuerzo = /(te esforzaste|lo intentaste|perseverancia|concentraste|has trabajado|lo lograste por tu empeño|qué bien lo intentaste)/i.test(lowerResp);
+        const tieneEtiqueta = /(eres (llorona|mala|enojona|traviesa|desordenada))/i.test(lowerResp);
+        const usaPero = /\bpero\b/i.test(lowerResp) && tieneEmpatia; // "Te entiendo, PERO..." puede invalidar
+
+        // Consejos específicos según categoría
+        let consejoCategoria = "";
+        let fraseModelo = "";
+        switch(categoria) {
+            case "berrinche":
+                consejoCategoria = "📌 **Berrinche**: Mantén la calma. Ignora la conducta (sin peligro) hasta que se calme. Luego atención positiva: 'Veo que ya estás más tranquila, ¿quieres un abrazo?' Después redirige.";
+                fraseModelo = "🟢 **Frase modelo**: 'Estás muy enfadada porque querías seguir jugando. Cuando estés lista, podemos leer un cuento juntos.'";
+                break;
+            case "agresion":
+                consejoCategoria = "📌 **Agresión**: Sujeta suavemente su mano: 'No voy a dejar que me lastimes. Las manos son para cuidar. Estás enfadada, podemos golpear esta almohada.'";
+                fraseModelo = "🟢 **Frase modelo**: 'Veo que estás muy enojada porque él tomó tu juguete. No puedo dejar que pegues. Vamos a decirle: 'Por favor, devuélvemelo'.'";
+                break;
+            case "rechazo":
+                consejoCategoria = "📌 **Rechazo a baño/vacuna**: Anticipa, da opciones. Para vacuna: honestidad: 'Duele un poquito, pero es rápido. Yo te acompaño'. Para baño: '¿Quieres el pato o la rana?'";
+                fraseModelo = "🟢 **Frase modelo**: 'Es momento del baño. ¿Llevas el pato amarillo o el azul? Tú eliges.'";
+                break;
+            case "comida":
+                consejoCategoria = "📌 **No quiere comer**: No fuerces. Aplica división de responsabilidades: tú ofreces, ella decide cuánto. Come con ella sin presión.";
+                fraseModelo = "🟢 **Frase modelo**: 'Aquí está la comida. Tú decides cuánto comer. Si no quieres ahora, luego habrá otra oportunidad.'";
+                break;
+            case "groseria":
+                consejoCategoria = "📌 **Malas palabras**: Sin drama. Si busca atención, ignora. Luego enseña alternativa: 'Podemos decir 'estoy muy enojada' en vez de esa palabra.'";
+                fraseModelo = "🟢 **Frase modelo**: 'Esa palabra suena fuerte. Si estás enojada, dime 'estoy furiosa' y te ayudo.'";
+                break;
+            case "conflicto":
+                consejoCategoria = "📌 **Conflicto en el cole**: Escucha activamente, valida: 'Qué feo que te hayan pegado. Gracias por contármelo. Vamos a hablar con tu profe para que te sientas segura.'";
+                fraseModelo = "🟢 **Frase modelo**: 'Me dolió saber que te empujaron. ¿Quieres que hable con la maestra para que te ayude?'";
+                break;
+            case "logro":
+                consejoCategoria = "📌 **Logro o conducta positiva**: Elogia el esfuerzo, no el resultado. Evita 'qué inteligente'. Destaca la perseverancia, la estrategia.";
+                if (tieneElogioEsfuerzo) fraseModelo = "✅ ¡Excelente! Ya estás usando elogio de esfuerzo. Sigue así: 'Me encanta cómo lo intentaste una y otra vez hasta lograrlo'.";
+                else fraseModelo = "🟢 **Frase modelo**: '¡Te esforzaste mucho! Lo intentaste varias veces y no te rendiste. Eso es perseverancia.'";
+                break;
+            default:
+                consejoCategoria = "📌 **Situación general**: Conecta, valida, pon límite amable y ofrece alternativa. Escucha más de lo que hablas.";
+                fraseModelo = "🟢 **Frase modelo general**: 'Te escucho. Entiendo que te sientes así. Juntas podemos encontrar una solución.'";
         }
+
+        // Construir mensaje
+        mensaje += `### 📝 Análisis de la situación\n${consejoCategoria}\n\n`;
+
+        // Evaluar respuesta del adulto
+        mensaje += "### 🔍 Evaluación de tu respuesta:\n";
+        if (tieneAmenaza) mensaje += "❌ **Amenaza o castigo detectado.** Los castigos no enseñan habilidades y dañan el vínculo. En su lugar, usa consecuencias lógicas y conexión.\n";
+        if (tieneInvalidacion) mensaje += "⚠️ **Invalidación emocional.** Frases como 'no llores' hacen que Emma oculte sus sentimientos. Valida siempre: 'Estás triste, está bien llorar, estoy aquí'.\n";
+        if (tieneEtiqueta) mensaje += "🏷️ **Evita etiquetar.** Decir 'eres mala' o 'eres llorona' condiciona su identidad. Describe la conducta: 'Eso que hiciste no estuvo bien, pero tú eres una niña maravillosa'.\n";
+        if (usaPero && tieneEmpatia) mensaje += "🔄 **Cuidado con el 'pero' después de validar.** Puede anular la validación. Intenta: 'Te entiendo, al mismo tiempo necesito que...' o separa en dos frases.\n";
+        if (tieneEmpatia && tieneLimiteAmable && tieneAlternativa) mensaje += "✅ **Excelente combinación**: validación + límite + alternativa. Es el núcleo de la disciplina positiva. ¡Muy bien!\n";
+        else if (tieneEmpatia && tieneLimiteAmable) mensaje += "✅ **Bien**: validas y pones límite. Para mejorar, añade una alternativa concreta: 'Podemos...'.\n";
+        else if (tieneEmpatia && !tieneLimiteAmable) mensaje += "👍 Validaste la emoción. Ahora agrega un límite claro y una opción. Ejemplo: 'Te entiendo, pero no puedo dejar que tires cosas. Vamos a guardarlas juntos'.\n";
+        else if (!tieneEmpatia && !tieneAmenaza) mensaje += "💡 Intenta comenzar validando su emoción: 'Veo que...', 'Entiendo que...'. Esto la ayudará a sentirse escuchada.\n";
+        if (tieneElogioEsfuerzo && categoria === "logro") mensaje += "🌟 ¡Perfecto! Estás usando elogio de proceso, fundamental para desarrollar mentalidad de crecimiento.\n";
+        else if (categoria === "logro" && /que inteligente|muy lista|genia/i.test(lowerResp)) mensaje += "⚠️ Elogiar con 'qué inteligente' puede generar miedo al error. En su lugar, destaca el esfuerzo: '¡Te esforzaste mucho!'.\n";
+
+        mensaje += `\n### ✨ Sugerencia de respuesta respetuosa\n${fraseModelo}\n`;
+        mensaje += "\n### 📚 Por qué funciona\nLa conexión antes de la corrección activa la parte racional del cerebro. Validar no significa estar de acuerdo, sino mostrar empatía. Los límites claros dan seguridad. El refuerzo positivo específico fomenta la repetición de conductas deseadas.";
         
-        // Análisis de calidad de respuesta
-        if (tieneAmenaza) mensaje += "❌ Evita amenazas o castigos. La investigación muestra que no enseñan habilidades y dañan el vínculo.\n";
-        if (tieneInvalidacion) mensaje += "⚠️ Invalidas sus emociones. Mejor: 'Veo que estás molesta, está bien llorar, estoy aquí'.\n";
-        if (tieneEmpatia && tieneLimiteAmable) mensaje += "✅ Muy bien: combinas empatía con límite claro. Eso es disciplina positiva.\n";
-        else if (tieneEmpatia && !tieneLimiteAmable) mensaje += "👍 Validaste bien, añade un límite amoroso para mayor seguridad.\n";
-        else if (!tieneEmpatia && !tieneAmenaza) mensaje += "💬 Intenta comenzar validando: 'Entiendo que te sientes...'.\n";
-        
-        // Frase modelo según categoría
-        let modelo = "";
-        if (categoria === "berrinche") modelo = "Frase modelo: 'Veo que estás muy enojada porque apagué la tele. Estoy aquí. Cuando te calmes, podemos jugar con los bloques.'";
-        else if (categoria === "agresion") modelo = "Frase modelo: 'No voy a dejar que pegues. Estás furiosa, podemos patear este cojín. Los golpes duelen.'";
-        else if (categoria === "rechazo") modelo = "Frase modelo: 'La vacuna pincha un segundo, te abrazo fuerte. Después elegimos una canción.'";
-        else if (categoria === "comida") modelo = "Frase modelo: 'Aquí tienes la comida. Tú decides cuánto comes. ¿Prefieres el brócoli o la zanahoria?'";
-        else if (categoria === "groseria") modelo = "Frase modelo: 'Esa palabra no es amable. Si estás enojada, dime: estoy furiosa y te escucho.'";
-        else if (categoria === "conflicto") modelo = "Frase modelo: 'Gracias por contarme. Qué feo que te pegaran. Juntos hablaremos con tu profe para que estés segura.'";
-        else modelo = "Frase general: 'Te escucho, entiendo que te sientes así. Podemos buscar una solución juntos.'";
-        
-        mensaje += `\n✨ Sugerencia de respuesta respetuosa:\n${modelo}\n`;
-        mensaje += "\n🧠 Recuerda: Sin etiquetas, sin castigos, conexión antes de corrección. Emma aprende de tu ejemplo.";
         return mensaje;
     }
-    
+
     function mostrarFeedback() {
         const accion = accionInput.value.trim();
         const respuesta = respuestaInput.value.trim();
         if (!accion) { alert("Por favor, describe qué hizo o dijo Emma."); return; }
         if (!respuesta) { alert("Escribe cómo piensas responder."); return; }
-        const analisis = obtenerFeedback(accion, respuesta);
-        feedbackContent.innerHTML = `<div style="white-space:pre-line;">${analisis.replace(/\n/g, '<br>')}</div>`;
+        const analisis = obtenerFeedbackAvanzado(accion, respuesta);
+        feedbackContent.innerHTML = `<div style="white-space:pre-line;">${analisis.replace(/\n/g, '<br>').replace(/###/g, '<strong>').replace(/###/g, '</strong>')}</div>`;
         feedbackContainer.style.display = 'block';
         feedbackContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
-    
+
     analizarBtn.addEventListener('click', mostrarFeedback);
-    
-    // Botones de ejemplo con pre-carga
-    document.getElementById('exBerrinche').addEventListener('click', () => {
-        accionInput.value = "Emma tuvo un berrinche enorme porque no quería bañarse, lloraba, pataleaba y me tiró la toalla.";
-        respuestaInput.value = "";
-        feedbackContainer.style.display = 'none';
-    });
-    document.getElementById('exGolpe').addEventListener('click', () => {
-        accionInput.value = "Emma le pegó a su amigo en el parque porque no le prestó un juguete.";
-        respuestaInput.value = "";
-        feedbackContainer.style.display = 'none';
-    });
-    document.getElementById('exVacuna').addEventListener('click', () => {
-        accionInput.value = "Hoy tenía vacuna y empezó a gritar 'no quiero, no quiero, me duele', forcejeaba.";
-        respuestaInput.value = "";
-        feedbackContainer.style.display = 'none';
-    });
-    document.getElementById('exGroseria').addEventListener('click', () => {
-        accionInput.value = "Dijo una grosería fuerte porque no le dejé comer más galletas.";
-        respuestaInput.value = "";
-        feedbackContainer.style.display = 'none';
-    });
-    document.getElementById('exColegio').addEventListener('click', () => {
-        accionInput.value = "Llegó del colegio llorando diciendo 'un niño me pegó en la cara y nadie quiere jugar conmigo'.";
-        respuestaInput.value = "";
-        feedbackContainer.style.display = 'none';
-    });
-    document.getElementById('exEsfuerzo').addEventListener('click', () => {
-        accionInput.value = "Emma logró armar un puzzle de 20 piezas después de intentarlo varias veces sola, y me mostró muy orgullosa su trabajo.";
-        respuestaInput.value = "¡Qué inteligente eres, lo hiciste perfecto!";
-        feedbackContainer.style.display = 'none';
-        setTimeout(() => mostrarFeedback(), 50);
-    });
+
+    // Botones de ejemplo
+    const ejemplos = {
+        exBerrinche: "Emma tuvo un berrinche enorme porque no quería bañarse, lloraba, pataleaba y me tiró la toalla.",
+        exGolpe: "Emma le pegó a su amigo en el parque porque no le prestó un juguete.",
+        exVacuna: "Hoy tenía vacuna y empezó a gritar 'no quiero, no quiero, me duele', forcejeaba.",
+        exGroseria: "Dijo una grosería fuerte porque no le dejé comer más galletas.",
+        exColegio: "Llegó del colegio llorando diciendo 'un niño me pegó en la cara y nadie quiere jugar conmigo'.",
+        exEsfuerzo: "Emma logró armar un puzzle de 20 piezas después de intentarlo varias veces sola, y me mostró muy orgullosa su trabajo.",
+        exLimpieza: "Emma recogió todos sus juguetes sin que se lo pidiera."
+    };
+    for (const [id, texto] of Object.entries(ejemplos)) {
+        document.getElementById(id).addEventListener('click', () => {
+            accionInput.value = texto;
+            respuestaInput.value = "";
+            feedbackContainer.style.display = 'none';
+        });
+    }
 </script>
 </body>
 </html>
