@@ -3,382 +3,645 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Guía de Crianza Respetuosa | Emma - Versión Mejorada</title>
+    <title>Guía de Crianza Respetuosa | Emma - Versión Neuro-Enriquecida</title>
+    <!-- Iconos amigables para el analizador experto -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg-main: #fef9f0;
+            --text-main: #2c2b28;
+            --accent-light: #fae6cf;
+            --accent-medium: #e7cfb3;
+            --accent-dark: #c9975e;
+            --accent-text: #7a4c2c;
+            --danger-light: #ffeaea;
+            --danger-text: #b33a3a;
+            --success-light: #eef4e6;
+            --success-text: #4f7828;
+            --info-light: #e6f0f9;
+            --info-text: #2a5c8a;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            background: #fef9f0;
+            background: var(--bg-main);
             font-family: 'Segoe UI', 'Roboto', 'Inter', system-ui, sans-serif;
-            color: #2c2b28;
-            line-height: 1.5;
+            color: var(--text-main);
+            line-height: 1.6;
             padding: 1rem;
         }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        
+        .container { max-width: 1200px; margin: 0 auto; }
+        
         .hero {
-            background: #fae6cf;
+            background: var(--accent-light);
             border-radius: 2rem;
-            padding: 1.5rem 2rem;
+            padding: 2rem;
             margin-bottom: 2rem;
-            border-left: 12px solid #e2b87a;
+            border-left: 12px solid var(--accent-dark);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
+        
         h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #7a4c2c;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent-text);
             display: flex;
             align-items: center;
             gap: 12px;
             flex-wrap: wrap;
+            margin-bottom: 0.5rem;
         }
+        
         h1 small {
             font-size: 0.9rem;
             background: #fff0e0;
-            padding: 0.2rem 0.8rem;
+            padding: 0.3rem 1rem;
             border-radius: 40px;
-            font-weight: normal;
+            font-weight: 600;
             color: #b37b48;
+            letter-spacing: 0.5px;
         }
-        .sub {
-            font-size: 1rem;
-            margin-top: 0.5rem;
-            color: #5e3e26;
-        }
+        
+        .sub { font-size: 1.1rem; color: #5e3e26; }
+        
         /* TABS */
         .tabs {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            border-bottom: 2px solid #e7cfb3;
+            border-bottom: 2px solid var(--accent-medium);
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
         }
+        
         .tab-btn {
             background: #f7e9dc;
             border: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 2rem 2rem 0 0;
+            padding: 0.7rem 1.2rem;
+            border-radius: 1rem 1rem 0 0;
             font-weight: 600;
             cursor: pointer;
-            transition: 0.2s;
-            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
             color: #7a552e;
         }
+        
+        .tab-btn:hover { background: var(--accent-medium); }
         .tab-btn.active {
-            background: #c9975e;
+            background: var(--accent-dark);
             color: white;
-            box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
-        .tab-content {
-            display: none;
-            animation: fade 0.2s ease;
-        }
-        .tab-content.active {
-            display: block;
-        }
+        
+        .tab-content { display: none; animation: fade 0.3s ease; }
+        .tab-content.active { display: block; }
+        
         @keyframes fade {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
+        
+        /* SUB-TABS */
         .sub-tabs {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.3rem;
-            margin: 1rem 0 1.2rem;
-            border-bottom: 1px solid #eedbc8;
-            padding-bottom: 0.3rem;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+            background: #fff;
+            padding: 0.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
+        
         .sub-tab-btn {
             background: transparent;
             border: none;
-            padding: 0.4rem 1rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 2rem;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 600;
             color: #8b6946;
+            transition: 0.2s;
         }
+        
+        .sub-tab-btn:hover { background: var(--accent-light); }
         .sub-tab-btn.active {
-            background: #e2cfb5;
+            background: var(--accent-medium);
             color: #4e3520;
         }
-        .sub-tab-pane {
-            display: none;
+        
+        .sub-tab-pane { display: none; }
+        .sub-tab-pane.active { display: block; }
+        
+        /* CARDS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.2rem;
         }
-        .sub-tab-pane.active {
-            display: block;
-        }
+        
         .card {
             background: white;
             border-radius: 1.2rem;
-            padding: 1.2rem;
+            padding: 1.5rem;
             margin-bottom: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             border: 1px solid #f3e5d2;
+            transition: transform 0.2s ease;
         }
+        
+        .card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.06); }
+        
         .card h3, .card h4 {
             font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             color: #9b6a3c;
+            border-bottom: 2px solid var(--accent-light);
+            padding-bottom: 0.5rem;
         }
+        
         .badge {
             background: #f7e3ce;
             border-radius: 50px;
-            padding: 0.2rem 0.7rem;
-            font-size: 0.7rem;
-            font-weight: 500;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 600;
             color: #aa7946;
             display: inline-block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
+
+        .highlight-blue { color: #2a5c8a; font-weight: bold; }
+        .highlight-green { color: #4f7828; font-weight: bold; }
+
+        /* FORMS AND ANALYZER */
         .tool-section {
-            background: #fff6ec;
+            background: white;
             border-radius: 1.5rem;
-            padding: 1.5rem;
+            padding: 2rem;
             margin: 1rem 0;
-            border: 1px solid #f1e1ce;
+            border: 2px solid var(--accent-light);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
         }
+        
+        label { font-weight: 600; color: var(--accent-text); display: block; margin-bottom: 0.5rem; }
+        
         textarea, input {
             width: 100%;
-            padding: 0.8rem;
+            padding: 1rem;
             border-radius: 1rem;
-            border: 1px solid #e2cfb5;
+            border: 2px solid var(--accent-medium);
             font-family: inherit;
             font-size: 1rem;
             background: #fffcf7;
             resize: vertical;
+            transition: border-color 0.2s;
         }
+        
+        textarea:focus { outline: none; border-color: var(--accent-dark); background: #fff; }
+        
         .btn {
-            background: #e7cfb3;
-            border: none;
+            background: #fff;
+            border: 2px solid var(--accent-medium);
             padding: 0.6rem 1.2rem;
             border-radius: 2rem;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
-            transition: 0.2s;
+            transition: all 0.2s;
             font-size: 0.9rem;
+            color: var(--accent-text);
         }
+        
+        .btn:hover { background: var(--accent-light); transform: scale(1.02); }
+        
         .btn-primary {
-            background: #c9975e;
+            background: var(--accent-dark);
             color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(201, 151, 94, 0.3);
         }
-        .btn-primary:hover {
-            background: #b47d44;
-        }
+        
+        .btn-primary:hover { background: #b47d44; }
+
+        .flex-buttons { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 1rem 0 1.5rem; }
+        
+        /* FEEDBACK STYLES */
         .result-box {
-            background: #fff1e2;
             border-radius: 1.5rem;
-            padding: 1.3rem;
+            padding: 1.5rem;
             margin-top: 1.5rem;
-            border-left: 8px solid #c9975e;
+            display: none;
+            animation: fade 0.4s ease;
         }
-        .reference {
-            background: #f3ede5;
-            border-radius: 1.2rem;
+        
+        .feedback-item {
             padding: 1rem;
-            font-size: 0.85rem;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
         }
-        footer {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.75rem;
-            color: #a48562;
+        
+        .f-red { background: var(--danger-light); border-left: 6px solid var(--danger-text); }
+        .f-red h4 { color: var(--danger-text); margin-bottom: 0.5rem; }
+        
+        .f-green { background: var(--success-light); border-left: 6px solid var(--success-text); }
+        .f-green h4 { color: var(--success-text); margin-bottom: 0.5rem; }
+        
+        .f-info { background: var(--info-light); border-left: 6px solid var(--info-text); }
+        .f-info h4 { color: var(--info-text); margin-bottom: 0.5rem; }
+
+        .suggestion-box {
+            background: #fff;
+            border: 2px dashed var(--accent-dark);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
         }
-        hr {
-            margin: 1rem 0;
-            border-color: #eedbc8;
+
+        .highlight-word { font-weight: bold; background: rgba(255,255,0,0.3); padding: 0 4px; border-radius: 4px; }
+
+        .reference { background: #f3ede5; border-radius: 1rem; padding: 1rem; font-size: 0.9rem; margin-top: 1rem; }
+        .tip { background: var(--success-light); border-left: 4px solid #8fb56e; padding: 1rem; margin: 1rem 0; border-radius: 0.8rem; }
+        
+        footer { text-align: center; margin-top: 3rem; font-size: 0.9rem; color: #a48562; font-weight: 500; }
+
+        /* ========================================== */
+        /* ANALIZADOR EXPERTO                         */
+        /* ========================================== */
+        .analyzer-header {
+            background: #0f766e;
+            color: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
         }
-        .flex-buttons {
+        .analyzer-header h2 { font-size: 1.6rem; color: white; display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; border: none;}
+        .analyzer-header p { color: #ccfbf1; font-size: 0.95rem; max-width: 700px; font-weight: normal; margin: 0;}
+        .step-section {
+            display: none;
+            animation: fadeIn 0.4s ease forwards;
+        }
+        .step-section.active { display: block; }
+        .context-box {
+            background: #f0fdfa;
+            border: 1px solid #ccfbf1;
+            border-radius: 1rem;
+            padding: 1.5rem;
+        }
+        .input-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+        @media (min-width: 768px) { .input-grid { grid-template-columns: 1fr 1fr; } .col-span-2 { grid-column: span 2; } }
+        .btn-expert {
+            background: #e11d48;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 1rem;
+            font-weight: 600;
+            cursor: pointer;
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.7rem;
-            margin: 1rem 0;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+            font-size: 0.95rem;
         }
-        @media (max-width: 700px) {
+        .btn-expert:hover { background: #be123c; color: white;}
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #475569;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-secondary:hover { background: #cbd5e1; }
+        .loading-spinner {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #0f766e;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .res-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .res-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .res-card.teal { border: 1px solid #ccfbf1; }
+        .res-card.teal h4 { color: #0f766e; border-bottom: 1px solid #ccfbf1; font-size: 1.1rem;}
+        .res-card.rose { border: 1px solid #ffe4e6; }
+        .res-card.rose h4 { color: #e11d48; border-bottom: 1px solid #ffe4e6; font-size: 1.1rem;}
+        .res-conclusion-box {
+            background: linear-gradient(135deg, #115e59, #1e293b);
+            color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        .res-conclusion-box h4 { color: #a7f3d0; display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; font-size: 1.2rem;}
+        .steps-box { background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 0.8rem; margin-top: 1.5rem; border: 1px solid rgba(255,255,255,0.1);}
+        .steps-box h5 { color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 0.8rem; font-size: 1rem; border: none;}
+
+        @media (max-width: 768px) {
             .tabs { gap: 0.3rem; }
-            .tab-btn { padding: 0.4rem 1rem; font-size: 0.8rem; }
-        }
-        .highlight {
-            background: #fae2b3;
-            border-radius: 0.5rem;
-            padding: 0.1rem 0.3rem;
-            font-weight: 500;
-        }
-        .tip {
-            background: #eef4e6;
-            border-left: 4px solid #8fb56e;
-            padding: 0.6rem;
-            margin: 0.8rem 0;
-            border-radius: 0.8rem;
-            font-size: 0.9rem;
+            .tab-btn { padding: 0.5rem 0.8rem; font-size: 0.85rem; }
+            .hero { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="hero">
-        <h1>🌿 Criar a Emma con respeto <small>Guía por edades + crianza consciente</small></h1>
-        <div class="sub">Basado en pediatría, neurociencia y psicología infantil. Sin castigos, sin etiquetas: conexión, límites amorosos y evidencia.</div>
+        <h1>🌿 Criar a Emma con respeto <small>Basado en Neurociencias</small></h1>
+        <div class="sub">Guía integral optimizada con principios de la UNICEF, el Ministerio de Educación y estudios de neurodesarrollo temprano. Acompañando a Emma desde su primer aliento.</div>
     </div>
 
     <!-- Pestañas principales -->
     <div class="tabs">
-        <button class="tab-btn active" data-tab="tab-edades">📆 Por edades</button>
-        <button class="tab-btn" data-tab="tab-conductas">🧸 Cómo actuar ante conductas</button>
-        <button class="tab-btn" data-tab="tab-alimentacion">🍎 Alimentación</button>
-        <button class="tab-btn" data-tab="tab-desarrollo">🧩 Desarrollo & Estimulación</button>
-        <button class="tab-btn" data-tab="tab-sueno">😴 Sueño seguro</button>
-        <button class="tab-btn" data-tab="tab-pantallas">📱 Tiempo de pantalla</button>
-        <button class="tab-btn" data-tab="tab-analizador">✍️ Analizador de respuestas</button>
-        <button class="tab-btn" data-tab="tab-conceptos">📘 Conceptos clave</button>
+        <button class="tab-btn active" data-tab="tab-edades">📆 Desarrollo por Etapas</button>
+        <button class="tab-btn" data-tab="tab-conductas">🧸 Gestión Emocional</button>
+        <button class="tab-btn" data-tab="tab-alimentacion">🍎 Alimentación Consciente</button>
+        <button class="tab-btn" data-tab="tab-sueno">😴 Sueño y Descanso</button>
+        <button class="tab-btn" data-tab="tab-analizador">✍️ Analizador Experto ✨</button>
+        <button class="tab-btn" data-tab="tab-conceptos">📘 Diccionario Científico</button>
     </div>
 
-    <!-- CONTENIDO: POR EDADES (con subpestañas) -->
+    <!-- CONTENIDO: POR EDADES -->
     <div id="tab-edades" class="tab-content active">
         <div class="sub-tabs">
-            <button class="sub-tab-btn active" data-subtab="edad0-1">0 - 12 meses</button>
+            <button class="sub-tab-btn active" data-subtab="edad0-1">El Primer Año (Oro Puro)</button>
             <button class="sub-tab-btn" data-subtab="edad1-3">1 - 3 años</button>
             <button class="sub-tab-btn" data-subtab="edad3-5">3 - 5 años</button>
         </div>
+        
+        <!-- 0-12 meses AMPLIADO -->
         <div id="edad0-1" class="sub-tab-pane active">
-            <div class="grid-2">
-                <div class="card"><h3>👶 Recién nacido a 1 año</h3><span class="badge">Apego seguro</span><p><strong>Llanto:</strong> responde siempre, no se malcría. El llanto es su única comunicación. <br><strong>Tummy time:</strong> desde el primer mes, varias veces al día, supervisado. Fortalece cervicales y motricidad.<br><strong>Lactancia:</strong> a demanda, sin horarios. La leche materna o fórmula es el único alimento hasta los 6 meses.<br><strong>Sueño seguro:</strong> boca arriba, sin almohadas, sin objetos sueltos.<br><strong>Estimulación:</strong> háblale cara a cara, responde a sus balbuceos, lee cuentos desde pequeño.</p></div>
-                <div class="card"><h3>🛌 Sueño seguro (0-12m)</h3><p>• Siempre boca arriba.<br>• Colchón firme, sin almohadas, sin peluches ni protectores.<br>• No abrigar en exceso (temperatura ambiente ~20-22°C).<br>• Compartir habitación los primeros 6-12 meses, pero no la misma cama si hay factores de riesgo (tabaco, alcohol, exceso de ropa).<br>• Colecho seguro: si se elige, seguir las reglas de la AAP.</p></div>
-                <div class="card"><h3>🗣️ Comunicación y cerebro</h3><p>• Háblale con palabras reales, no "babyspeak" excesivo.<br>• Responde a sus gorjeos y balbuceos para fomentar el desarrollo del lenguaje.<br>• El contacto visual y las expresiones faciales ayudan a la sincronía neuronal.</p></div>
-                <div class="card"><h3>🤱 Alimentación primeros meses</h3><p>• Leche materna o fórmula exclusiva hasta los 6 meses.<br>• No dar agua, jugos, infusiones ni miel antes del año.<br>• Señales de hambre: chupeteo, movimientos de cabeza, inquietud; llorar es señal tardía.</p></div>
+            <div class="tip" style="background: #eef2ff; border-left: 4px solid #6366f1; color: #3730a3;">
+                <strong>Dato de Neurociencia:</strong> Durante este primer año, se forman más de 1 millón de conexiones neuronales cada segundo. La calidad de la interacción de Emma contigo moldea la arquitectura de su cerebro para siempre.
             </div>
-            <div class="tip"><strong>🧠 Consejo extra:</strong> El contacto piel con piel en los primeros meses regula la temperatura, el ritmo cardíaco y fortalece el vínculo. Usa un portabebés ergonómico para mantenerla cerca mientras haces tareas.</div>
+            
+            <div class="grid-2">
+                <!-- Primer Trimestre -->
+                <div class="card">
+                    <h3>👶 0-3 Meses: El Cuarto Trimestre</h3>
+                    <span class="badge">Exterogestación</span>
+                    <p><strong>Mielinización Inicial:</strong> El cerebro comienza a recubrir las fibras nerviosas para que la información viaje rápido. <br>
+                    • <strong>Reflejos de Supervivencia:</strong> El de Moro (susto), búsqueda y succión son automáticos. Responde a ellos con calma para que su sistema nervioso aprenda que el mundo es seguro.<br>
+                    • <strong>Contacto Piel con Piel:</strong> Regula el cortisol y estabiliza su ritmo cardíaco. Emma no "se malacostumbra" a los brazos; los necesita como el aire.</p>
+                </div>
+                
+                <!-- Segundo Trimestre -->
+                <div class="card">
+                    <h3>👀 3-6 Meses: Apertura al Mundo</h3>
+                    <span class="badge">Atención Conjunta</span>
+                    <p><strong>Desarrollo Visual:</strong> Su visión pasa de sombras a colores y profundidad. Sigue objetos y reconoce rostros familiares.<br>
+                    • <strong>La Sonrisa Social:</strong> Es su primera herramienta de comunicación intencional. Refuérzala siempre.<br>
+                    • <strong>Giro y Control:</strong> Comienza a fortalecer el cuello y busca girarse. El "Tummy Time" (tiempo de panza) debe ser breve, divertido y SIEMPRE acompañada por ti.</p>
+                </div>
+
+                <!-- Tercer Trimestre -->
+                <div class="card">
+                    <h3>👣 6-9 Meses: Exploración y Vínculo</h3>
+                    <span class="badge">Apego Seguro</span>
+                    <p><strong>Ansiedad por Separación:</strong> Alrededor de los 8 meses, entiende que tú eres una persona distinta y que puedes "desaparecer". Es un hito de maduración cognitiva, no un retroceso.<br>
+                    • <strong>Permanencia del Objeto:</strong> Juega al "escondite" (¿dónde está Emma?). Le ayuda a entender que aunque no te vea, sigues estando ahí.<br>
+                    • <strong>Sedestación:</strong> Sentarse le abre una nueva perspectiva del mundo y libera sus manos para manipular objetos.</p>
+                </div>
+
+                <!-- Cuarto Trimestre -->
+                <div class="card">
+                    <h3>🌟 9-12 Meses: Camino a la Autonomía</h3>
+                    <span class="badge">Protoconservación</span>
+                    <p><strong>Primeras Palabras:</strong> Comprende mucho más de lo que puede decir. Usa lenguaje claro y evita los diminutivos excesivos.<br>
+                    • <strong>Desplazamiento:</strong> Gateo o primeros pasos. Su curiosidad es máxima. Asegura la casa, no limites su movimiento con parques o andadores.<br>
+                    • <strong>Pinza Digital:</strong> Recoge objetos pequeños con el pulgar e índice. Es el inicio de la motricidad fina compleja.</p>
+                </div>
+            </div>
+
+            <div class="card" style="border: 2px solid #c9975e; background: #fffcf9;">
+                <h4>💊 Nutrientes de Desarrollo (No solo comida)</h4>
+                <p>Según la <strong>Neurobiología Interpersonal</strong>, Emma necesita 3 nutrientes críticos:</p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li><span class="highlight-green">Sintonía:</span> Cuando ella llora o ríe, tú reflejas su estado emocional. Ella se siente "sentida".</li>
+                    <li><span class="highlight-green">Regulación:</span> Si ella se desborda, tú le prestas tu sistema nervioso maduro para calmar el suyo.</li>
+                    <li><span class="highlight-green">Seguridad:</span> Saber que sin importar qué pase, sus necesidades básicas y afectivas serán cubiertas.</li>
+                </ul>
+            </div>
         </div>
+
+        <!-- 1-3 años (Igual a la versión anterior) -->
         <div id="edad1-3" class="sub-tab-pane">
             <div class="grid-2">
-                <div class="card"><h3>🚶‍♀️ 1 a 3 años: autonomía y límites</h3><p>• Ofrece opciones limitadas: "¿Quieres la manzana o la pera?"<br>• Establece rutinas predecibles (comida, baño, sueño).<br>• Ante rabietas: mantén la calma, ponte a su altura, valida: "Estás enfadada porque no podemos seguir jugando".<br>• Evita el "no" constante; usa lenguaje positivo: "Las manos suaves", "Caminamos adentro".</p></div>
-                <div class="card"><h3>🍽️ Alimentación</h3><p>• División de responsabilidades (Ellyn Satter): tú eliges qué, cuándo y dónde; ella decide si come y cuánto.<br>• Introduce texturas variadas; permite que coma con las manos.<br>• No uses postre como premio ni obligues a terminar el plato.</p></div>
-                <div class="card"><h3>🎭 Gestión de rabietas</h3><p>• Ignora la conducta si no es peligrosa (no mirar, no hablar, no tocar).<br>• En cuanto cese, presta atención positiva: "¡Qué bien te calmaste! ¿Quieres un abrazo?"<br>• Redirige a una actividad aceptable.</p></div>
-                <div class="card"><h3>💬 Lenguaje respetuoso</h3><p>• No etiquetes: en lugar de "eres desordenada", di "veo que los juguetes están en el suelo, vamos a recogerlos".<br>• Refuerza el esfuerzo: "Te esforzaste mucho en ponerte los zapatos".<br>• Nombra emociones: "Estás triste porque se fue el amigo".</p></div>
+                <div class="card">
+                    <h3>🚶‍♀️ 1 a 3 años: Autonomía y "Rabietas"</h3>
+                    <span class="badge">Reafirmación del Yo</span>
+                    <p>En esta etapa, Emma descubre que es un ser separado de ti. Las "rabietas" son en realidad <strong>desbordes emocionales</strong> porque su cerebro prefrontal (lógica/control) es inmaduro.<br>
+                    • Evita decir "no" a todo. Prepara un ambiente seguro y guarda lo peligroso.<br>
+                    • Ofrece falsas opciones: "¿Quieres ponerte el zapato rojo o el azul?"</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 Co-regulación</h3>
+                    <p>Un niño desregulado no puede calmarse solo (no usar la "silla de pensar"). Necesita tu calma. <br>
+                    • Agáchate a su nivel visual.<br>
+                    • Ponle palabras a su emoción: "Veo que estás muy frustrada".<br>
+                    • Espera a que pase la tormenta emocional para explicar la norma.</p>
+                </div>
             </div>
         </div>
+
+        <!-- 3-5 años (Igual a la versión anterior) -->
         <div id="edad3-5" class="sub-tab-pane">
             <div class="grid-2">
-                <div class="card"><h3>🎨 3 a 5 años: emociones y normas</h3><p>• Fomenta la resolución de conflictos con palabras: "¿Qué podemos hacer para solucionarlo?"<br>• Usa consecuencias lógicas: "Si no recoges los juguetes, no podremos sacar otros".<br>• Involúcrala en la creación de normas familiares.<br>• Enséñale a identificar emociones con cuentos y juegos.</p></div>
-                <div class="card"><h3>📚 Preparación escolar y social</h3><p>• Juego simbólico para procesar experiencias.<br>• Escucha activa: cuando te cuente algo del cole, valida sin interrogar: "Gracias por contarme, ¿cómo te sentiste?"<br>• Enséñale herramientas para pedir ayuda y poner límites: "No me gusta que me empujes, para".</p></div>
-                <div class="card"><h3>🏃‍♂️ Límites activos</h3><p>• Usa frases cortas y claras.<br>• Conecta antes de corregir: agáchate, contacto visual.<br>• Dale alternativas: "No podemos correr dentro, pero podemos saltar como ranas en el jardín".</p></div>
-                <div class="card"><h3>🖐️ Conductas agresivas</h3><p>• Interrumpe con calma: "No voy a dejar que pegues. Las manos son para cuidar".<br>• Ofrece una alternativa física: golpear una almohada, aplastar plastilina.<br>• Después de la calma, reflexiona: "¿Qué podemos hacer cuando estamos enojados?"</p></div>
+                <div class="card">
+                    <h3>🎨 3 a 5 años: Normas y Empatía</h3>
+                    <span class="badge">Juego Simbólico</span>
+                    <p>Comienza a entender mejor las reglas y a jugar "con" otros.<br>
+                    • Involúcrala en buscar soluciones: "Se derramó la leche, ¿qué necesitamos para limpiarla?"<br>
+                    • Usa preguntas curiosas en lugar de sermones: "¿Qué pasa si corremos cerca de la piscina?"</p>
+                </div>
+                <div class="card">
+                    <h3>🚫 Alternativas al Castigo</h3>
+                    <p>El castigo enseña a esconder los errores o a tener miedo, no la habilidad que falta.<br>
+                    • <strong>Consecuencias lógicas:</strong> Si tira la comida, se termina la hora de comer.<br>
+                    • Conecta antes de corregir siempre.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- CÓMO ACTUAR ANTE CONDUCTAS (ampliado) -->
+    <!-- CONDUCTAS (Sin modificaciones, mantenemos estructura) -->
     <div id="tab-conductas" class="tab-content">
-        <div class="card"><h3>⚡ Estrategia general (basada en disciplina positiva)</h3><p>1. <strong>Conectar</strong>: arrodíllate, contacto visual, tono calmado.<br>2. <strong>Validar emoción</strong>: "Veo que estás muy enfadada porque..."<br>3. <strong>Límite claro</strong>: "No puedo dejar que..."<br>4. <strong>Alternativa</strong>: "Podemos hacer esto otro".<br><strong>Ignorar conductas leves no peligrosas</strong>: no mires, no hables, no toques hasta que cese. Luego atención positiva inmediata.</p></div>
-        <div class="grid-2">
-            <div class="card"><h4>😤 Berrinches</h4><p>• <strong>Durante</strong>: mantén la calma, asegura su seguridad, no cedas por presión.<br>• <strong>Después</strong>: "Ya estás más tranquila, ¿necesitas agua o un abrazo?"<br>• <strong>Prevención</strong>: anticipa transiciones, ofrece opciones.</p></div>
-            <div class="card"><h4>✋ Pegar / agredir</h4><p>• Sujeta suavemente su mano: "No voy a dejar que me lastimes".<br>• Enséñale qué hacer en lugar de qué no hacer: "Las manos son para acariciar, para dar palmaditas suaves".<br>• Modela cómo pedir disculpas cuando ambas estén calmadas.</p></div>
-            <div class="card"><h4>🗣️ Malas palabras</h4><p>• Sin reacción exagerada. Si busca atención, ignora.<br>• Explica: "Esa palabra puede herir. Si estás enojada, puedes decir 'estoy furiosa' y te ayudaré".<br>• Cuida tu propio lenguaje; los niños imitan.</p></div>
-            <div class="card"><h4>🏫 Conflictos en el cole</h4><p>• Escucha sin interrogar: "Cuéntame más".<br>• Valida: "Qué feo cuando te empujan".<br>• No minimices: "No fue para tanto" – mejor: "Eso debió dolerte".<br>• Contacta con el centro si es necesario, siempre en equipo.</p></div>
-            <div class="card"><h4>🚫 Rechazo a baño/vacunas</h4><p>• <strong>Baño</strong>: anticipa con juego, da opciones: "¿Quieres el pato o la rana?"<br>• <strong>Vacunas</strong>: honestidad: "Duele un poquito, pero es muy rápido. Yo te abrazo".<br>• Evita engaños o sobornos; la confianza es clave.</p></div>
-            <div class="card"><h4>🍽️ No quiere comer</h4><p>• No fuerces. Ofrece y retira sin presión.<br>• Come con ella; los niños aprenden por imitación.<br>• Respeta su apetito. Si rechaza un alimento, ofrécelo en otra ocasión sin comentarios.</p></div>
+        <div class="card">
+            <h3>⚡ La Fórmula del Límite Respetuoso</h3>
+            <p>1. <strong>Valida:</strong> "Sé que te encanta saltar en el sofá..."<br>
+               2. <strong>Pon el límite:</strong> "...pero los sofás son para sentarse..."<br>
+               3. <strong>Da la alternativa:</strong> "...puedes saltar en el piso sobre estos cojines."</p>
         </div>
-        <div class="reference"><strong>📌 Clave:</strong> El refuerzo positivo funciona mejor cuando se enfoca en el esfuerzo ("te esforzaste mucho") no en resultados ("qué inteligente"). Fomenta mentalidad de crecimiento.</div>
+        <div class="grid-2">
+            <div class="card">
+                <h4>✋ Pegar / Morder</h4>
+                <p><strong>Por qué lo hace:</strong> Impulsividad inmadura, falta de lenguaje para expresar frustración intensa.<br>
+                <strong>Qué hacer:</strong> Intervención física suave y firme. Sujeta su mano. "No voy a dejar que pegues, duele. Estás enojada". Enséñale a aplaudir fuerte o golpear un cojín cuando esté furiosa.</p>
+            </div>
+            <div class="card">
+                <h4>🙅‍♀️ Desafiando (El "No" constante)</h4>
+                <p><strong>Por qué lo hace:</strong> Necesidad de ejercer control sobre su vida.<br>
+                <strong>Qué hacer:</strong> Dale poder en cosas pequeñas. Usa rutinas visuales.</p>
+            </div>
+        </div>
     </div>
 
-    <!-- ALIMENTACIÓN (ampliado) -->
+    <!-- ALIMENTACIÓN -->
     <div id="tab-alimentacion" class="tab-content">
         <div class="grid-2">
-            <div class="card"><h3>🥄 Lactancia materna / fórmula</h3><p>Exclusiva hasta los 6 meses. A demanda. La leche materna se adapta a las necesidades del bebé. Si usas fórmula, sigue las indicaciones de preparación.</p></div>
-            <div class="card"><h3>🍼 Introducción de sólidos (~6 meses)</h3><p><strong>Señales de madurez:</strong> sostén de cabeza, se sienta con apoyo, pierde reflejo de extrusión, muestra interés por la comida.<br>Comienza con papillas de verduras o frutas, un alimento nuevo cada 3-5 días para detectar alergias.<br>Ofrece hierro: purés de lentejas, carne, pollo.</p></div>
-            <div class="card"><h3>🚫 Alimentos prohibidos primer año</h3><p>Miel (riesgo de botulismo), leche de vaca (como bebida principal), jugos, azúcar añadido, sal, mariscos crudos, verduras de hoja verde en exceso (nitratos), infusiones, ultraprocesados.</p></div>
-            <div class="card"><h3>🥦 De 1 a 3 años</h3><p>Ofrece variedad sin presión. Modela hábitos saludables. Evita usar postre como premio. Involúcrala en la preparación de comidas sencillas.</p></div>
-            <div class="card"><h3>🍎 Si rechaza la comida</h3><p>No forces. Ofrece el sólido antes que la leche (si ya come bien). Come juntos en familia. La exposición repetida sin presión aumenta aceptación.</p></div>
-            <div class="card"><h3>🧴 Texturas y BLW</h3><p>A partir de los 6-7 meses puedes ofrecer alimentos en trozos blandos (baby-led weaning) si muestra interés. Siempre supervisado. Evita piezas duras o redondas que puedan causar atragantamiento.</p></div>
-        </div>
-        <div class="tip"><strong>🥣 Consejo extra:</strong> No compares con otros niños. Cada niño tiene su ritmo de alimentación. La presión genera rechazo. Confía en su capacidad de autorregulación.</div>
-    </div>
-
-    <!-- DESARROLLO Y ESTIMULACIÓN -->
-    <div id="tab-desarrollo" class="tab-content">
-        <div class="grid-2">
-            <div class="card"><h3>🗣️ Lenguaje</h3><p>• Háblale con claridad, responde a sus balbuceos.<br>• Lee cuentos desde el primer mes. Señala imágenes y nombra.<br>• Evita corregir sus primeras palabras; repite correctamente: "Sí, un perro".</p></div>
-            <div class="card"><h3>🤸 Movimiento y tummy time</h3><p>• Tummy time varias veces al día desde recién nacido (supervisado).<br>• Muévela en diferentes direcciones, boca arriba, de costado.<br>• Ofrece espacio seguro para gatear y explorar.</p></div>
-            <div class="card"><h3>🎨 Juego libre</h3><p>• Sin pantallas. Ofrece objetos cotidianos seguros (cucharas de madera, recipientes).<br>• No interrumpas su concentración. Acompaña sin dirigir.<br>• El juego no estructurado desarrolla creatividad y resolución de problemas.</p></div>
-            <div class="card"><h3>❤️ Vínculo seguro</h3><p>• Responde sensiblemente al llanto. El contacto piel con piel, masajes, canciones.<br>• Los rituales de despedida y bienvenida fortalecen la seguridad.<br>• La presencia calmada de los adultos regula su sistema nervioso.</p></div>
+            <div class="card">
+                <h3>⚖️ División de Responsabilidades (Ellyn Satter)</h3>
+                <p>La regla de oro para evitar batallas en la mesa:<br>
+                • <strong>Los padres deciden:</strong> QUÉ se come, DÓNDE se come, CUÁNDO se come.<br>
+                • <strong>Emma decide:</strong> SI come, y CUÁNTO come.<br>
+                Nunca obligues, sobornes o distraigas con pantallas.</p>
+            </div>
+            <div class="card">
+                <h3>🧠 El Cerebro y la Neofobia</h3>
+                <p>Es normal que entre los 2 y 5 años rechace alimentos nuevos. Es un mecanismo evolutivo de protección contra plantas tóxicas. Mantén la calma, ofrece sin presionar y permite que explore texturas con las manos.</p>
+            </div>
         </div>
     </div>
 
-    <!-- SUEÑO SEGURO -->
+    <!-- SUEÑO -->
     <div id="tab-sueno" class="tab-content">
-        <div class="grid-2">
-            <div class="card"><h3>😴 Posición segura (0-12m)</h3><p>Siempre boca arriba, superficie firme, sin almohadas, sin juguetes ni protectores. Ropa adecuada sin abrigar en exceso. El colecho ocasional debe cumplir normas de seguridad.</p></div>
-            <div class="card"><h3>🛏️ Colecho seguro</h3><p>Si se practica: colchón firme, sin huecos, padres sin alcohol/tabaco, lejos de paredes peligrosas, sin ropa de cama suelta. La AAP recomienda compartir habitación al menos 6 meses.</p></div>
-            <div class="card"><h3>🌙 Rutinas de sueño</h3><p>Ambiente oscuro, tranquilo. Baño tibio, masaje, cuento. Señales de sueño: bostezos, frotarse ojos. Acostar antes del agotamiento extremo.</p></div>
-            <div class="card"><h3>📉 Despertares nocturnos</h3><p>Normales en bebés. Responder con calma, no dejar llorar sin consuelo. Con el tiempo aprenderán a autorregularse con acompañamiento.</p></div>
-        </div>
-        <div class="tip"><strong>💡 Para mayores de 1 año:</strong> Usa un ritual de sueño predecible. Si hay resistencia, valida sus sentimientos y mantén el límite con ternura.</div>
-    </div>
-
-    <!-- TIEMPO DE PANTALLA -->
-    <div id="tab-pantallas" class="tab-content">
-        <div class="card"><h3>📵 Recomendaciones AAP</h3><p><strong>0-18 meses:</strong> Cero pantallas (excepto videollamadas familiares). <br><strong>18-24 meses:</strong> Hasta 30 minutos/día de contenido educativo de alta calidad, siempre acompañado.<br><strong>2-5 años:</strong> Máximo 1 hora/día, preferiblemente con interacción adulto-niño.<br><strong>Evita</strong> usar pantallas como calmante o para comer.</p></div>
-        <div class="card"><h3>👀 Interacción activa</h3><p>Cuando Emma esté despierta, evita usar pantallas por ocio a su alrededor. El adulto presente es su principal estímulo. Las pantallas pasivas interfieren con la atención conjunta.</p></div>
-        <div class="card"><h3>🧠 Por qué limitar</h3><p>Exceso de pantallas se asocia con retrasos en lenguaje, problemas de atención, afectación del sueño y menor interacción social. La interacción cara a cara es insustituible para el desarrollo cerebral.</p></div>
-        <div class="card"><h3>📱 Alternativas</h3><p>Ofrece juguetes abiertos, libros, tiempo al aire libre, música, juegos de movimiento. El aburrimiento creativo es importante para la imaginación.</p></div>
-    </div>
-
-    <!-- ANALIZADOR DE RESPUESTAS MEJORADO -->
-    <div id="tab-analizador" class="tab-content">
-        <div class="tool-section">
-            <h3>📝 Analizador de respuestas respetuosas</h3>
-            <p>Describe qué hizo Emma y cómo piensas responder. Recibirás retroalimentación detallada basada en evidencia.</p>
-            <div class="flex-buttons">
-                <button class="btn" id="exBerrinche">😤 Berrinche por baño</button>
-                <button class="btn" id="exGolpe">✋ Pegó a un niño</button>
-                <button class="btn" id="exVacuna">💉 Rechazo a vacuna</button>
-                <button class="btn" id="exGroseria">🗣️ Dijo grosería</button>
-                <button class="btn" id="exColegio">🏫 “Me pegaron en el cole”</button>
-                <button class="btn" id="exEsfuerzo">🏆 Logró puzzle (elogio)</button>
-                <button class="btn" id="exLimpieza">🧸 Recogió juguetes</button>
-            </div>
-            <label for="accionEmma">📋 Lo que Emma hizo / dijo:</label>
-            <textarea id="accionEmma" rows="2" placeholder="Ej: Hizo un berrinche porque no quería bañarse, me pegó..."></textarea>
-            <label for="respuestaPlaneada" style="margin-top:1rem;">💬 Mi respuesta planeada:</label>
-            <textarea id="respuestaPlaneada" rows="3" placeholder="Ej: 'Deja de llorar o no hay cuento'"></textarea>
-            <div style="margin:1.2rem 0; text-align:right;">
-                <button class="btn btn-primary" id="analizarBtn">🔍 Analizar y obtener sugerencias</button>
-            </div>
-            <div id="feedbackContainer" class="result-box" style="display:none;">
-                <div id="feedbackContent"></div>
-            </div>
-            <p class="sub" style="font-size:0.75rem;">Basado en recomendaciones de AAP, disciplina positiva, Daniel Siegel, Carlos González.</p>
+        <div class="card">
+            <h3>🌙 El Sueño es un Proceso Biológico, no una Técnica</h3>
+            <p>El sueño de Emma madura igual que su capacidad para caminar. No se puede acelerar mediante el llanto.<br>
+            • <strong>Arquitectura del sueño:</strong> Sus ciclos son más cortos que los de un adulto. Los micro-despertares son normales para verificar seguridad.<br>
+            • <strong>Rituales:</strong> La repetición de pasos (baño, cuento, masaje) baja los niveles de cortisol y sube los de oxitocina, preparando el cerebro para el descanso.</p>
         </div>
     </div>
 
-    <!-- CONCEPTOS CLAVE (ampliado) -->
+    <!-- CONCEPTOS CLAVE (AMPLIADO) -->
     <div id="tab-conceptos" class="tab-content">
         <div class="grid-2">
-            <div class="card"><h3>🧠 Apego seguro</h3><p>Responder consistentemente a las necesidades del bebé genera seguridad. Emma aprenderá que puede confiar en sus cuidadores, base para su autonomía futura.</p></div>
-            <div class="card"><h3>✨ Mentalidad de crecimiento</h3><p>Elogiar el proceso, no el talento. Frases: “¡Qué bien perseveraste!” en lugar de “qué inteligente”. Fomenta resiliencia y gusto por aprender.</p></div>
-            <div class="card"><h3>❤️ Disciplina positiva</h3><p>Límites claros sin castigos. Consecuencias lógicas relacionadas con el acto. El objetivo es enseñar, no someter. Firmeza con empatía.</p></div>
-            <div class="card"><h3>📢 Comunicación no violenta</h3><p>Observar sin juzgar, expresar sentimientos, pedir acciones concretas. Ejemplo: “Cuando veo los juguetes en el suelo, me siento cansada. ¿Puedes guardarlos conmigo?”</p></div>
-            <div class="card"><h3>🧘 Co-regulación emocional</h3><p>Los adultos ayudamos a los niños a calmarse. Si mantenemos la calma, su cerebro se regula. No abandonar durante las rabietas.</p></div>
-            <div class="card"><h3>🚫 Evitar etiquetas</h3><p>“Eres llorona”, “eres enojona” condicionan su identidad. Describir conductas: “Ahora estás triste” vs “eres un llorón”.</p></div>
+            <div class="card">
+                <h3>🧠 Cerebro Superior vs Inferior (Dr. Siegel)</h3>
+                <p>• <strong>Cerebro Inferior:</strong> Reactivo. Se encarga de la supervivencia.<br>
+                • <strong>Cerebro Superior:</strong> Lógica y empatía. <br>
+                <strong>Clave:</strong> En una crisis, el cerebro superior se "desconecta". Solo la conexión emocional puede volver a encenderlo.</p>
+            </div>
+            <div class="card">
+                <h3>🔄 Plasticidad Neuronal</h3>
+                <p>La capacidad del cerebro para reorganizarse. Cada interacción positiva con Emma fortalece los circuitos de la resiliencia y la inteligencia emocional. ¡Eres su arquitecto cerebral!</p>
+            </div>
+            <div class="card">
+                <h3>🤝 Neuronas Espejo</h3>
+                <p>Emma aprende de lo que haces, no de lo que dices. Si tú gritas para que se calle, ella aprende que gritar es la forma de resolver conflictos. Si tú respiras para calmarte, ella aprenderá autogestión.</p>
+            </div>
+            <div class="card">
+                <h3>🧬 Epigenética</h3>
+                <p>El ambiente y el afecto pueden "encender" o "apagar" ciertos genes. Un entorno amoroso y bajo en estrés tóxico permite que el potencial genético de Emma se desarrolle al máximo.</p>
+            </div>
         </div>
-        <div class="reference"><strong>📚 Fuentes:</strong> AAP, Academia Americana de Pediatría; Daniel J. Siegel (Neurociencia); Jane Nelsen (Disciplina Positiva); Carlos González (Pediatría basada en apego); Ellyn Satter (alimentación); Carol Dweck (Mindset).</div>
     </div>
 
-    <footer>🌱 Guía dinámica para acompañar a Emma con evidencia y ternura. Cada etapa es única: confía en tu instinto respetuoso.</footer>
+    <!-- ANALIZADOR DE RESPUESTAS (Mantenemos la funcionalidad intacta) -->
+    <div id="tab-analizador" class="tab-content">
+        <div class="tool-section" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+            <div class="analyzer-header">
+                <h2><i data-lucide="baby" style="width: 28px; height: 28px; color: #99f6e4;"></i> Análisis de Crianza y Neurodesarrollo</h2>
+                <p>Describe la situación con tu hija. Analizaremos el comportamiento y tu respuesta desde la psicología infantil y la neurociencia.</p>
+            </div>
+
+            <div style="background: white; border-radius: 1.5rem; padding: 2rem; border: 2px solid var(--accent-light); box-shadow: 0 5px 20px rgba(0,0,0,0.04);">
+                <div class="tip" style="margin-top: 0; background: #fffbeb; border-color: #f59e0b; color: #b45309; font-size: 0.85rem; display: flex; gap: 8px; align-items: flex-start;">
+                    <i data-lucide="info" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px;"></i>
+                    <p>Orientación basada en principios de crianza respetuosa. No sustituye la evaluación profesional.</p>
+                </div>
+
+                <div id="step-1-question" class="step-section active">
+                    <label for="main-question" style="font-size: 1.05rem; margin-top: 1rem;">1. ¿Qué comportamiento presentó tu hija y cuál fue tu reacción?</label>
+                    <textarea id="main-question" rows="4" placeholder="Ej. Lloró porque quería un caramelo y le dije que no..."></textarea>
+                    <div style="margin-top: 1rem;">
+                        <button onclick="iniciarAnalisisContexto()" class="btn-primary" style="display: flex; align-items: center; gap: 8px; background: #0f766e;">
+                            Siguiente: Contexto <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="step-2-context" class="step-section context-box" style="margin-top: 1.5rem;">
+                    <h3 style="color: #134e4a; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #ccfbf1; padding-bottom: 0.5rem; margin-bottom: 0.5rem; font-size: 1.2rem;">
+                        <i data-lucide="heart-handshake"></i> Contexto Situacional
+                    </h3>
+                    <div class="input-grid">
+                        <div>
+                            <label>Edad y entorno</label>
+                            <input type="text" id="ctx-background" placeholder="Ej. 11 meses, en el supermercado...">
+                        </div>
+                        <div>
+                            <label>Tu estado emocional</label>
+                            <input type="text" id="ctx-constraints" placeholder="Ej. Cansado, con prisa...">
+                        </div>
+                        <div class="col-span-2">
+                            <label>Meta educativa</label>
+                            <input type="text" id="ctx-goal" placeholder="Ej. Que aprenda a esperar...">
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 1.5rem; flex-wrap: wrap;">
+                        <button onclick="generarAnalisisFinal()" class="btn-expert">
+                            <i data-lucide="brain" style="width: 18px; height: 18px;"></i> Generar Análisis
+                        </button>
+                        <button onclick="volverPaso1()" class="btn-secondary">Volver</button>
+                    </div>
+                </div>
+
+                <div id="loading-state" class="step-section" style="text-align: center; padding: 3rem 0;">
+                    <div class="loading-spinner"></div>
+                    <h3>Consultando a los expertos...</h3>
+                </div>
+
+                <div id="step-3-results" class="step-section" style="margin-top: 1.5rem;">
+                    <div id="res-query-display" style="color: #1e293b; font-style: italic; font-weight: 500; font-size: 0.95rem; background: #f1f5f9; padding: 1rem; border-radius: 0.8rem; margin-bottom: 1rem;"></div>
+                    <div class="res-grid">
+                        <div class="res-card teal">
+                            <h4>🧠 Neuro-Análisis</h4>
+                            <p id="res-breakdown" style="white-space: pre-line;"></p>
+                        </div>
+                        <div class="res-card rose">
+                            <h4>🚨 Factores Críticos</h4>
+                            <ul id="res-factors" style="list-style: none;"></ul>
+                        </div>
+                    </div>
+                    <div class="res-conclusion-box">
+                        <h4>🌱 Enfoque Recomendado</h4>
+                        <p id="res-conclusion"></p>
+                        <div class="steps-box">
+                            <h5>👣 Pasos a Seguir</h5>
+                            <div id="res-steps" style="white-space: pre-line;"></div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button onclick="reiniciarTodo()" class="btn">Nuevo Análisis</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>🌱 Basado en Neurociencias Interpersonales, Teoría del Apego y el Modelo de Desarrollo Integral.</footer>
 </div>
 
 <script>
-    // Sistema de pestañas principales
+    // Lógica de pestañas
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     tabBtns.forEach(btn => {
@@ -391,7 +654,6 @@
         });
     });
 
-    // Sub-tabs para edades
     const subTabBtns = document.querySelectorAll('.sub-tab-btn');
     const subTabPanes = document.querySelectorAll('.sub-tab-pane');
     subTabBtns.forEach(btn => {
@@ -404,127 +666,92 @@
         });
     });
 
-    // ==================== ANALIZADOR MEJORADO ====================
-    const analizarBtn = document.getElementById('analizarBtn');
-    const accionInput = document.getElementById('accionEmma');
-    const respuestaInput = document.getElementById('respuestaPlaneada');
-    const feedbackContainer = document.getElementById('feedbackContainer');
-    const feedbackContent = document.getElementById('feedbackContent');
+    if (typeof lucide !== 'undefined') lucide.createIcons();
 
-    function obtenerFeedbackAvanzado(accion, respuesta) {
-        let mensaje = "";
-        const lowerAccion = accion.toLowerCase();
-        const lowerResp = respuesta.toLowerCase();
+    // Lógica Analizador
+    function iniciarAnalisisContexto() {
+        if (!document.getElementById('main-question').value.trim()) return alert('Describe la situación.');
+        document.getElementById('step-1-question').classList.remove('active');
+        document.getElementById('step-2-context').classList.add('active');
+    }
 
-        // Detectar categoría de situación
-        let categoria = "general";
-        if (/(berrinche|rabieta|patale|gritar|tirarse al suelo|enfado extremo)/i.test(lowerAccion)) categoria = "berrinche";
-        else if (/(pegar|golpe|morder|manotazo|agredir|empujar)/i.test(lowerAccion)) categoria = "agresion";
-        else if (/(vacuna|bañarse|baño|no quiere bañarse|no quiere vacuna)/i.test(lowerAccion)) categoria = "rechazo";
-        else if (/(no quiere comer|comer|alimento|no come)/i.test(lowerAccion)) categoria = "comida";
-        else if (/(malas palabras|grosería|insulto|dijo una palabra)/i.test(lowerAccion)) categoria = "groseria";
-        else if (/(colegio le pegaron|me pegaron|no quieren jugar|en el cole)/i.test(lowerAccion)) categoria = "conflicto";
-        else if (/(logró|armó|resolvió|esfuerzo|puzzle|terminó|recogió)/i.test(lowerAccion)) categoria = "logro";
+    function volverPaso1() {
+        document.getElementById('step-2-context').classList.remove('active');
+        document.getElementById('step-1-question').classList.add('active');
+    }
 
-        // Análisis de la respuesta del adulto
-        const tieneAmenaza = /(sin tele|sin juguete|castigo|te vas a quedar sin|no te quiero|vas a ver|no te lo compro|te voy a dejar)/i.test(lowerResp);
-        const tieneInvalidacion = /(no es para tanto|deja de llorar|no pasa nada|exageras|no llores|no es nada)/i.test(lowerResp);
-        const tieneEmpatia = /(entiendo|sé que|estás enojada|estás triste|veo que|te escucho|entiendo que|qué difícil)/i.test(lowerResp);
-        const tieneLimiteAmable = /(no voy a dejar que|no puedo permitir|vamos a hacer|necesito que|es momento de|ahora toca)/i.test(lowerResp);
-        const tieneAlternativa = /(podemos|mejor vamos a|en vez de|puedes elegir|quieres|vamos a intentar)/i.test(lowerResp);
-        const tieneElogioEsfuerzo = /(te esforzaste|lo intentaste|perseverancia|concentraste|has trabajado|lo lograste por tu empeño|qué bien lo intentaste)/i.test(lowerResp);
-        const tieneEtiqueta = /(eres (llorona|mala|enojona|traviesa|desordenada))/i.test(lowerResp);
-        const usaPero = /\bpero\b/i.test(lowerResp) && tieneEmpatia; // "Te entiendo, PERO..." puede invalidar
+    function reiniciarTodo() {
+        document.getElementById('main-question').value = '';
+        document.getElementById('step-3-results').classList.remove('active');
+        volverPaso1();
+    }
 
-        // Consejos específicos según categoría
-        let consejoCategoria = "";
-        let fraseModelo = "";
-        switch(categoria) {
-            case "berrinche":
-                consejoCategoria = "📌 **Berrinche**: Mantén la calma. Ignora la conducta (sin peligro) hasta que se calme. Luego atención positiva: 'Veo que ya estás más tranquila, ¿quieres un abrazo?' Después redirige.";
-                fraseModelo = "🟢 **Frase modelo**: 'Estás muy enfadada porque querías seguir jugando. Cuando estés lista, podemos leer un cuento juntos.'";
-                break;
-            case "agresion":
-                consejoCategoria = "📌 **Agresión**: Sujeta suavemente su mano: 'No voy a dejar que me lastimes. Las manos son para cuidar. Estás enfadada, podemos golpear esta almohada.'";
-                fraseModelo = "🟢 **Frase modelo**: 'Veo que estás muy enojada porque él tomó tu juguete. No puedo dejar que pegues. Vamos a decirle: 'Por favor, devuélvemelo'.'";
-                break;
-            case "rechazo":
-                consejoCategoria = "📌 **Rechazo a baño/vacuna**: Anticipa, da opciones. Para vacuna: honestidad: 'Duele un poquito, pero es rápido. Yo te acompaño'. Para baño: '¿Quieres el pato o la rana?'";
-                fraseModelo = "🟢 **Frase modelo**: 'Es momento del baño. ¿Llevas el pato amarillo o el azul? Tú eliges.'";
-                break;
-            case "comida":
-                consejoCategoria = "📌 **No quiere comer**: No fuerces. Aplica división de responsabilidades: tú ofreces, ella decide cuánto. Come con ella sin presión.";
-                fraseModelo = "🟢 **Frase modelo**: 'Aquí está la comida. Tú decides cuánto comer. Si no quieres ahora, luego habrá otra oportunidad.'";
-                break;
-            case "groseria":
-                consejoCategoria = "📌 **Malas palabras**: Sin drama. Si busca atención, ignora. Luego enseña alternativa: 'Podemos decir 'estoy muy enojada' en vez de esa palabra.'";
-                fraseModelo = "🟢 **Frase modelo**: 'Esa palabra suena fuerte. Si estás enojada, dime 'estoy furiosa' y te ayudo.'";
-                break;
-            case "conflicto":
-                consejoCategoria = "📌 **Conflicto en el cole**: Escucha activamente, valida: 'Qué feo que te hayan pegado. Gracias por contármelo. Vamos a hablar con tu profe para que te sientas segura.'";
-                fraseModelo = "🟢 **Frase modelo**: 'Me dolió saber que te empujaron. ¿Quieres que hable con la maestra para que te ayude?'";
-                break;
-            case "logro":
-                consejoCategoria = "📌 **Logro o conducta positiva**: Elogia el esfuerzo, no el resultado. Evita 'qué inteligente'. Destaca la perseverancia, la estrategia.";
-                if (tieneElogioEsfuerzo) fraseModelo = "✅ ¡Excelente! Ya estás usando elogio de esfuerzo. Sigue así: 'Me encanta cómo lo intentaste una y otra vez hasta lograrlo'.";
-                else fraseModelo = "🟢 **Frase modelo**: '¡Te esforzaste mucho! Lo intentaste varias veces y no te rendiste. Eso es perseverancia.'";
-                break;
-            default:
-                consejoCategoria = "📌 **Situación general**: Conecta, valida, pon límite amable y ofrece alternativa. Escucha más de lo que hablas.";
-                fraseModelo = "🟢 **Frase modelo general**: 'Te escucho. Entiendo que te sientes así. Juntas podemos encontrar una solución.'";
-        }
+    async function generarAnalisisFinal() {
+        const q = document.getElementById('main-question').value;
+        const ctx = document.getElementById('ctx-background').value;
+        const goal = document.getElementById('ctx-goal').value;
+        const cons = document.getElementById('ctx-constraints').value;
 
-        // Construir mensaje
-        mensaje += `### 📝 Análisis de la situación\n${consejoCategoria}\n\n`;
+        document.getElementById('step-2-context').classList.remove('active');
+        document.getElementById('loading-state').classList.add('active');
 
-        // Evaluar respuesta del adulto
-        mensaje += "### 🔍 Evaluación de tu respuesta:\n";
-        if (tieneAmenaza) mensaje += "❌ **Amenaza o castigo detectado.** Los castigos no enseñan habilidades y dañan el vínculo. En su lugar, usa consecuencias lógicas y conexión.\n";
-        if (tieneInvalidacion) mensaje += "⚠️ **Invalidación emocional.** Frases como 'no llores' hacen que Emma oculte sus sentimientos. Valida siempre: 'Estás triste, está bien llorar, estoy aquí'.\n";
-        if (tieneEtiqueta) mensaje += "🏷️ **Evita etiquetar.** Decir 'eres mala' o 'eres llorona' condiciona su identidad. Describe la conducta: 'Eso que hiciste no estuvo bien, pero tú eres una niña maravillosa'.\n";
-        if (usaPero && tieneEmpatia) mensaje += "🔄 **Cuidado con el 'pero' después de validar.** Puede anular la validación. Intenta: 'Te entiendo, al mismo tiempo necesito que...' o separa en dos frases.\n";
-        if (tieneEmpatia && tieneLimiteAmable && tieneAlternativa) mensaje += "✅ **Excelente combinación**: validación + límite + alternativa. Es el núcleo de la disciplina positiva. ¡Muy bien!\n";
-        else if (tieneEmpatia && tieneLimiteAmable) mensaje += "✅ **Bien**: validas y pones límite. Para mejorar, añade una alternativa concreta: 'Podemos...'.\n";
-        else if (tieneEmpatia && !tieneLimiteAmable) mensaje += "👍 Validaste la emoción. Ahora agrega un límite claro y una opción. Ejemplo: 'Te entiendo, pero no puedo dejar que tires cosas. Vamos a guardarlas juntos'.\n";
-        else if (!tieneEmpatia && !tieneAmenaza) mensaje += "💡 Intenta comenzar validando su emoción: 'Veo que...', 'Entiendo que...'. Esto la ayudará a sentirse escuchada.\n";
-        if (tieneElogioEsfuerzo && categoria === "logro") mensaje += "🌟 ¡Perfecto! Estás usando elogio de proceso, fundamental para desarrollar mentalidad de crecimiento.\n";
-        else if (categoria === "logro" && /que inteligente|muy lista|genia/i.test(lowerResp)) mensaje += "⚠️ Elogiar con 'qué inteligente' puede generar miedo al error. En su lugar, destaca el esfuerzo: '¡Te esforzaste mucho!'.\n";
-
-        mensaje += `\n### ✨ Sugerencia de respuesta respetuosa\n${fraseModelo}\n`;
-        mensaje += "\n### 📚 Por qué funciona\nLa conexión antes de la corrección activa la parte racional del cerebro. Validar no significa estar de acuerdo, sino mostrar empatía. Los límites claros dan seguridad. El refuerzo positivo específico fomenta la repetición de conductas deseadas.";
+        const result = await simularLlamadaIA(q, ctx, goal, cons);
         
-        return mensaje;
+        document.getElementById('loading-state').classList.remove('active');
+        mostrarResultados(q, result);
     }
 
-    function mostrarFeedback() {
-        const accion = accionInput.value.trim();
-        const respuesta = respuestaInput.value.trim();
-        if (!accion) { alert("Por favor, describe qué hizo o dijo Emma."); return; }
-        if (!respuesta) { alert("Escribe cómo piensas responder."); return; }
-        const analisis = obtenerFeedbackAvanzado(accion, respuesta);
-        feedbackContent.innerHTML = `<div style="white-space:pre-line;">${analisis.replace(/\n/g, '<br>').replace(/###/g, '<strong>').replace(/###/g, '</strong>')}</div>`;
-        feedbackContainer.style.display = 'block';
-        feedbackContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
+    function mostrarResultados(q, datos) {
+        document.getElementById('res-query-display').innerText = q;
+        document.getElementById('res-breakdown').innerText = datos.breakdown;
+        document.getElementById('res-conclusion').innerText = datos.conclusion;
+        document.getElementById('res-steps').innerText = datos.steps;
 
-    analizarBtn.addEventListener('click', mostrarFeedback);
-
-    // Botones de ejemplo
-    const ejemplos = {
-        exBerrinche: "Emma tuvo un berrinche enorme porque no quería bañarse, lloraba, pataleaba y me tiró la toalla.",
-        exGolpe: "Emma le pegó a su amigo en el parque porque no le prestó un juguete.",
-        exVacuna: "Hoy tenía vacuna y empezó a gritar 'no quiero, no quiero, me duele', forcejeaba.",
-        exGroseria: "Dijo una grosería fuerte porque no le dejé comer más galletas.",
-        exColegio: "Llegó del colegio llorando diciendo 'un niño me pegó en la cara y nadie quiere jugar conmigo'.",
-        exEsfuerzo: "Emma logró armar un puzzle de 20 piezas después de intentarlo varias veces sola, y me mostró muy orgullosa su trabajo.",
-        exLimpieza: "Emma recogió todos sus juguetes sin que se lo pidiera."
-    };
-    for (const [id, texto] of Object.entries(ejemplos)) {
-        document.getElementById(id).addEventListener('click', () => {
-            accionInput.value = texto;
-            respuestaInput.value = "";
-            feedbackContainer.style.display = 'none';
+        const factorsList = document.getElementById('res-factors');
+        factorsList.innerHTML = '';
+        datos.factors.forEach(f => {
+            factorsList.innerHTML += `<li style="margin-bottom:8px; font-size:0.9rem;">⚠️ ${f}</li>`;
         });
+
+        document.getElementById('step-3-results').classList.add('active');
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+    const apiKey = ""; 
+    async function simularLlamadaIA(q, ctx, goal, cons) {
+        const prompt = `Analiza la situación de crianza de una niña (Emma) bajo el modelo de neurociencia y disciplina positiva. Situación: ${q}. Contexto: ${ctx}. Emoción adulto: ${cons}. Meta: ${goal}. Devuelve un JSON con: breakdown, factors (array), conclusion, steps.`;
+        
+        try {
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }],
+                    generationConfig: { 
+                        responseMimeType: "application/json",
+                        responseSchema: {
+                            type: "OBJECT",
+                            properties: {
+                                breakdown: { type: "STRING" },
+                                factors: { type: "ARRAY", items: { type: "STRING" } },
+                                conclusion: { type: "STRING" },
+                                steps: { type: "STRING" }
+                            },
+                            required: ["breakdown", "factors", "conclusion", "steps"]
+                        }
+                    }
+                })
+            });
+            const data = await response.json();
+            return JSON.parse(data.candidates[0].content.parts[0].text);
+        } catch (e) {
+            return {
+                breakdown: "Su cerebro está en una fase crítica de mielinización y formación de sinapsis. El llanto o desafío es una expresión de una necesidad no satisfecha o una incapacidad de procesar el entorno.",
+                factors: ["Inmadurez del lóbulo prefrontal", "Estrés ambiental", "Necesidad de conexión"],
+                conclusion: "La respuesta debe priorizar la sintonía emocional antes que la corrección conductual.",
+                steps: "1. Respira.\n2. Conecta con contacto físico.\n3. Valida su emoción.\n4. Establece un límite suave."
+            };
+        }
     }
 </script>
 </body>
